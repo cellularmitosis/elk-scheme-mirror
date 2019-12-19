@@ -1,0 +1,408 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* FIXME HARD */
+#undef ALIGN_8BYTE
+
+/* FIXME HARD */
+#undef ANSI_CPP
+
+/* Define if a-=1000; a[1000] doesn't work */
+#undef ARRAY_BROKEN
+
+/* FIXME HARD */
+#undef CACHECTL_H
+
+/* FIXME HARD */
+#undef CAN_DUMP
+
+/* Define if dynamic loading is supported */
+#undef CAN_LOAD_LIB
+
+/* FIXME HARD */
+#undef COFF
+
+/* FIXME HARD */
+#undef COFF_PAGESIZE
+
+/* FIXME HARD */
+#undef CONVEX_AOUT
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
+
+/* FIXME HARD */
+#undef DEBUG_DUMP
+
+/* Define default max stack size */
+#undef DEFAULT_MAX_STACK_SIZE
+
+/* FIXME HARD */
+#undef ECOFF
+
+/* Define if <unistd.h> defines environ */
+#undef ENVIRON_IN_UNISTD_H
+
+/* FIXME HARD */
+#undef FCHMOD_BROKEN
+
+/* FIXME HARD */
+#undef FILE_TEXT_START
+
+/* FIXME HARD */
+#undef FIND_AOUT
+
+/* FIXME HARD */
+#undef FINIT_PREFIX
+
+/* FIXME HARD */
+#undef GENERATIONAL_GC
+
+/* FIXME HARD */
+#undef GETGROUPS_TYPE
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define to 1 if you have the <alloca.h> header file. */
+#undef HAVE_ALLOCA_H
+
+/* Define to 1 if you have the `atexit' function. */
+#undef HAVE_ATEXIT
+
+/* Define to 1 if you have the <a.out.h> header file. */
+#undef HAVE_A_OUT_H
+
+/* Define if you have BSD-style flushing */
+#undef HAVE_BSD_FLUSH
+
+/* Define to 1 if you have the `dirent' function. */
+#undef HAVE_DIRENT
+
+/* Define to 1 if you have the <dirent.h> header file. */
+#undef HAVE_DIRENT_H
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define if you have the BeOS dl */
+#undef HAVE_DL_BEOS
+
+/* Define if you have the GNU dld library */
+#undef HAVE_DL_DLD_LINK
+
+/* Define if you have the dlopen API */
+#undef HAVE_DL_DLOPEN
+
+/* Define if you have the Darwin dyld API */
+#undef HAVE_DL_DYLD
+
+/* Define to 1 if you have the <dl.h> header file. */
+#undef HAVE_DL_H
+
+/* Define if you have the shl_load API */
+#undef HAVE_DL_SHL_LOAD
+
+/* Define if you have Windows' LoadLibrary */
+#undef HAVE_DL_WINDOWS
+
+/* Define to 1 if you have the `environ' function. */
+#undef HAVE_ENVIRON
+
+/* Define to 1 if you have the `fpurge' function. */
+#undef HAVE_FPURGE
+
+/* Define to 1 if you have the `ftime' function. */
+#undef HAVE_FTIME
+
+/* Define to 1 if you have the `getcwd' function. */
+#undef HAVE_GETCWD
+
+/* Define to 1 if you have the `getdtablesize' function. */
+#undef HAVE_GETDTABLESIZE
+
+/* Define to 1 if you have the `gethostname' function. */
+#undef HAVE_GETHOSTNAME
+
+/* Define to 1 if you have the `getpagesize' function. */
+#undef HAVE_GETPAGESIZE
+
+/* Define to 1 if you have the `getrlimit' function. */
+#undef HAVE_GETRLIMIT
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* Define to 1 if you have the `getwd' function. */
+#undef HAVE_GETWD
+
+/* Define to 1 if you have the <grp.h> header file. */
+#undef HAVE_GRP_H
+
+/* Define to 1 if you have the <image.h> header file. */
+#undef HAVE_IMAGE_H
+
+/* Define to 1 if you have the `index' function. */
+#undef HAVE_INDEX
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define if you have libelf. */
+#undef HAVE_LIBELF
+
+/* Define to 1 if you have the `load_add_on' function. */
+#undef HAVE_LOAD_ADD_ON
+
+/* Define to 1 if you have the <mach-o/dyld.h> header file. */
+#undef HAVE_MACH_O_DYLD_H
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `mktemp' function. */
+#undef HAVE_MKTEMP
+
+/* Define to 1 if you have the `mprotect' function. */
+#undef HAVE_MPROTECT
+
+/* Define to 1 if you have the <netdb.h> header file. */
+#undef HAVE_NETDB_H
+
+/* Define to 1 if you have the `NSLinkModule' function. */
+#undef HAVE_NSLINKMODULE
+
+/* Define to 1 if you have the <pwd.h> header file. */
+#undef HAVE_PWD_H
+
+/* Define to 1 if you have the `random' function. */
+#undef HAVE_RANDOM
+
+/* Define to 1 if you have the `regcomp' function. */
+#undef HAVE_REGCOMP
+
+/* Define to 1 if you have the `rename' function. */
+#undef HAVE_RENAME
+
+/* Define to 1 if you have the `sigblock' function. */
+#undef HAVE_SIGBLOCK
+
+/* Define to 1 if you have the <signal.h> header file. */
+#undef HAVE_SIGNAL_H
+
+/* Define to 1 if you have the `sigprocmask' function. */
+#undef HAVE_SIGPROCMASK
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define if you have struct rlimit */
+#undef HAVE_STRUCT_RLIMIT
+
+/* Define to 1 if you have the <sys/dl.h> header file. */
+#undef HAVE_SYS_DL_H
+
+/* Define to 1 if you have the <sys/filio.h> header file. */
+#undef HAVE_SYS_FILIO_H
+
+/* Define to 1 if you have the <sys/inttypes.h> header file. */
+#undef HAVE_SYS_INTTYPES_H
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define to 1 if you have the <sys/resource.h> header file. */
+#undef HAVE_SYS_RESOURCE_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/times.h> header file. */
+#undef HAVE_SYS_TIMES_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <sys/utime.h> header file. */
+#undef HAVE_SYS_UTIME_H
+
+/* Define to 1 if you have the <sys/wait.h> header file. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define to 1 if you have the <sys/_inttypes.h> header file. */
+#undef HAVE_SYS__INTTYPES_H
+
+/* Define to 1 if you have the `tempnam' function. */
+#undef HAVE_TEMPNAM
+
+/* Define to 1 if you have the <termios.h> header file. */
+#undef HAVE_TERMIOS_H
+
+/* Define to 1 if you have the <termio.h> header file. */
+#undef HAVE_TERMIO_H
+
+/* Define to 1 if you have the `tmpnam' function. */
+#undef HAVE_TMPNAM
+
+/* Define to 1 if you have the `uname' function. */
+#undef HAVE_UNAME
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the <utime.h> header file. */
+#undef HAVE_UTIME_H
+
+/* Define to 1 if you have the `vfork' function. */
+#undef HAVE_VFORK
+
+/* Define to 1 if you have the `vprintf' function. */
+#undef HAVE_VPRINTF
+
+/* Define to 1 if you have the `wait3' function. */
+#undef HAVE_WAIT3
+
+/* Define to 1 if you have the `wait4' function. */
+#undef HAVE_WAIT4
+
+/* Define to 1 if you have the `waitpid' function. */
+#undef HAVE_WAITPID
+
+/* FIXME HARD */
+#undef HEAP_SIZE
+
+/* FIXME HARD */
+#undef HP9K
+
+/* FIXME HARD */
+#undef HPSHLIB
+
+/* FIXME HARD */
+#undef INIT_PREFIX
+
+/* FIXME HARD */
+#undef LD_NAME
+
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#undef LT_OBJDIR
+
+/* FIXME HARD */
+#undef MACH_O
+
+/* FIXME HARD */
+#undef MEM_TEXT_START
+
+/* FIXME HARD */
+#undef MPROTECT_MMAP
+
+/* FIXME HARD */
+#undef MPROTECT_SIG
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the home page for this package. */
+#undef PACKAGE_URL
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* FIXME HARD */
+#undef PRAGMA_ALLOCA
+
+/* FIXME HARD */
+#undef SEG_SIZ
+
+/* FIXME HARD */
+#undef SIGSEGV_AIX
+
+/* FIXME HARD */
+#undef SIGSEGV_ARG4
+
+/* FIXME HARD */
+#undef SIGSEGV_HPUX
+
+/* FIXME HARD */
+#undef SIGSEGV_SIGCONTEXT
+
+/* FIXME HARD */
+#undef SIGSEGV_SIGINFO
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at runtime.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define the C99 integer types header */
+#undef STDINT_HEADER
+
+/* Define if symbols start with '_' */
+#undef SYMS_BEGIN_WITH
+
+/* Our operating system */
+#undef SYSTEMTYPE
+
+/* Define if the system is Darwin */
+#undef SYS_DARWIN
+
+/* FIXME HARD */
+#undef TERMIO
+
+/* FIXME HARD */
+#undef TEXT_LENGTH_ADJ
+
+/* Version number of package */
+#undef VERSION
+
+/* FIXME HARD */
+#undef XCOFF
+
+/* Define if <unistd.h> defines __environ */
+#undef __ENVIRON_IN_UNISTD_H
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
+
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#undef size_t

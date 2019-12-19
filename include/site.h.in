@@ -1,0 +1,82 @@
+/* site.h.in: Site-local features.
+ *
+ * $Id$
+ *
+ * Copyright 1990, 1991, 1992, 1993, 1994, 1995, Oliver Laumann, Berlin
+ * Copyright 2002, 2003 Sam Hocevar <sam@hocevar.net>, Paris
+ *
+ * This software was derived from Elk 1.2, which was Copyright 1987, 1988,
+ * 1989, Nixdorf Computer AG and TELES GmbH, Berlin (Elk 1.2 has been written
+ * by Oliver Laumann for TELES Telematic Services, Berlin, in a joint project
+ * between TELES and Nixdorf Microprocessor Engineering, Berlin).
+ *
+ * Oliver Laumann, TELES GmbH, Nixdorf Computer AG and Sam Hocevar, as co-
+ * owners or individual owners of copyright in this software, grant to any
+ * person or company a worldwide, royalty free, license to
+ *
+ *    i) copy this software,
+ *   ii) prepare derivative works based on this software,
+ *  iii) distribute copies of this software or derivative works,
+ *   iv) perform this software, or
+ *    v) display this software,
+ *
+ * provided that this notice is not removed and that neither Oliver Laumann
+ * nor Teles nor Nixdorf are deemed to have made any representations as to
+ * the suitability of this software for any purpose nor are held responsible
+ * for any defects of this software.
+ *
+ * THERE IS ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.
+ */
+
+/* The C99 integer types header */
+#include @STDINT_HEADER@
+
+/* C Compiler features */
+#ifndef __GNUC__
+#  define __asm__ asm
+#endif
+
+/* Under gcc, we use the __attribute__ macro to tell the compiler that a
+ * function does not return. */
+#ifdef __GNUC__
+#  define elk_attribute(att) __attribute__ ((att))
+#else
+#  define elk_attribute(att) /* */
+#endif
+
+/* Properly export Win32 symbols */
+#if (defined(_WIN32) || defined(__CYGWIN__)) && \
+    !(defined(ELK_BUILD_DLL) || defined(ELK_STATIC))
+#  define elk_import __declspec(dllimport)
+#else
+#  define elk_import /* */
+#endif
+#if defined(__cplusplus)
+#  define extern_c extern "C"
+#else
+#  define extern_c extern
+#endif
+
+/* Directory separator */
+#ifdef WIN32
+#   define SEPARATOR_CHAR '\\'
+#   define SEPARATOR_STRING "\\"
+#else
+#   define SEPARATOR_CHAR '/'
+#   define SEPARATOR_STRING "/"
+#endif
+
+/* Arithmetic shift right for compilers that don't sign extend:
+ */
+#if (-1 >> 1) < 0
+#  define ASR(n,s)    ((n) >>= (s))
+#else
+#  define NBITS(v)    ((sizeof v) * 8)
+#  define HIBIT(v,n)  (NBITS(v) - (n))
+#  define ASR(n,s)    ((n) >>= (s),\
+                         ((n) & (1 << (HIBIT((n),(s)) - 1)) ?\
+                            ((n) |= ~(((unsigned)1 << HIBIT((n),(s))) - 1)) :\
+                            (n)))
+#endif
+
+

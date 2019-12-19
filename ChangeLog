@@ -1,0 +1,3780 @@
+------------------------------------------------------------------------
+r267 | sam | 2006-06-14 17:06:05 +0200 (Wed, 14 Jun 2006) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/man/Makefile.am
+   M /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix/Makefile.am
+   M /trunk/doc/usenix/Makefile.am
+   M /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt/Makefile.am
+
+  * Fixed build with recent autotools.
+
+------------------------------------------------------------------------
+r266 | sam | 2006-06-14 16:48:50 +0200 (Wed, 14 Jun 2006) | 3 lines
+Changed paths:
+   M /trunk
+   M /trunk/NEWS
+   M /trunk/configure.ac
+
+  * Updated NEWS for 0.99.7.
+  * Prepared 0.99.7 release.
+
+------------------------------------------------------------------------
+r265 | sam | 2006-06-14 16:47:30 +0200 (Wed, 14 Jun 2006) | 2 lines
+Changed paths:
+   M /trunk/examples/tests/Makefile.am
+   A /trunk/examples/tests/gc-stress.scm
+
+  * Added a garbage collector stress test.
+
+------------------------------------------------------------------------
+r264 | sam | 2006-06-14 16:11:36 +0200 (Wed, 14 Jun 2006) | 2 lines
+Changed paths:
+   M /trunk/src/libelk.c
+
+  * Added volatile keyword to prevent gcc from optimising away.
+
+------------------------------------------------------------------------
+r263 | sam | 2006-06-14 14:33:15 +0200 (Wed, 14 Jun 2006) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   D /trunk/debian
+
+  * Removed debian/ directory from upstream.
+
+------------------------------------------------------------------------
+r262 | sam | 2006-03-02 22:17:23 +0100 (Thu, 02 Mar 2006) | 3 lines
+Changed paths:
+   M /trunk/src/cont.c
+
+  * src/cont.c: marked as volatile variables that we don't want optimised
+    away.
+
+------------------------------------------------------------------------
+r261 | sam | 2006-03-02 22:07:01 +0100 (Thu, 02 Mar 2006) | 2 lines
+Changed paths:
+   M /trunk/src/proc.c
+
+  * src/proc.c: store function pointers in typed variables before calling them.
+
+------------------------------------------------------------------------
+r260 | sam | 2006-03-02 22:04:10 +0100 (Thu, 02 Mar 2006) | 2 lines
+Changed paths:
+   M /trunk/src/type.c
+
+  * src/type.c: Replaced useless ++p with p+1.
+
+------------------------------------------------------------------------
+r259 | sam | 2006-03-02 22:02:40 +0100 (Thu, 02 Mar 2006) | 2 lines
+Changed paths:
+   M /trunk/bootstrap
+
+  * bootstrap: imported a newer bootstrap script.
+
+------------------------------------------------------------------------
+r258 | sam | 2006-03-02 21:54:22 +0100 (Thu, 02 Mar 2006) | 3 lines
+Changed paths:
+   M /trunk/include/object.h
+
+  * include/object.h: use uintptr_t instead of intptr_t to avoid side
+    effects during divisions.
+
+------------------------------------------------------------------------
+r257 | sam | 2005-11-01 19:59:20 +0100 (Tue, 01 Nov 2005) | 2 lines
+Changed paths:
+   M /trunk/bootstrap
+
+  * bootstrap: support automake version 1.8 and 1.9.
+
+------------------------------------------------------------------------
+r256 | sam | 2005-11-01 19:58:14 +0100 (Tue, 01 Nov 2005) | 2 lines
+Changed paths:
+   M /trunk/src/cont.c
+
+  * src/cont.c: workaround for an amd64 gcc bug.
+
+------------------------------------------------------------------------
+r255 | sam | 2004-08-09 22:21:00 +0200 (Mon, 09 Aug 2004) | 3 lines
+Changed paths:
+   M /trunk/src/heap-gen.c
+
+  * src/heap-gen.c:
+    + Fixed shadowed global declarations.
+
+------------------------------------------------------------------------
+r254 | sam | 2004-08-09 22:09:20 +0200 (Mon, 09 Aug 2004) | 2 lines
+Changed paths:
+   D /trunk/autotools
+
+  * No longer version-control autotools.
+
+------------------------------------------------------------------------
+r253 | sam | 2004-08-09 22:08:52 +0200 (Mon, 09 Aug 2004) | 6 lines
+Changed paths:
+   M /trunk/Makefile.am
+   D /trunk/autotools/Makefile.am
+   M /trunk/bootstrap
+   M /trunk/configure.ac
+
+  * bootstrap:
+    + Call aclocal after libtoolize.
+    + Got rid of autotools/
+  * configure.ac:
+    + Added more warning flags to the compilation process.
+
+------------------------------------------------------------------------
+r252 | sam | 2004-08-09 22:05:25 +0200 (Mon, 09 Aug 2004) | 3 lines
+Changed paths:
+   M /trunk/include/exception.h
+   M /trunk/include/extern.h
+   M /trunk/include/funcproto.h
+   M /trunk/include/gc.h
+   M /trunk/include/intern.h
+   M /trunk/include/object.h
+   M /trunk/include/stkmem.h
+   M /trunk/lib/misc/newhandler.cpp
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/lib/xwidgets/motif/support.d
+   M /trunk/lib/xwidgets/xt.h
+   M /trunk/src/stab-elf.c
+
+  * Got rid of P_() and ELLIPSIS macros.
+  * Adapted all prototypes to no longer use P_().
+
+------------------------------------------------------------------------
+r251 | sam | 2004-03-14 14:10:32 +0100 (Sun, 14 Mar 2004) | 5 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+   M /trunk/debian/menu
+   M /trunk/debian/rules
+
+  * debian/control:
+    + Build-depend on the new X development packages instead of xlibs-dev.
+  * debian/menu:
+    + Syntax fixes.
+
+------------------------------------------------------------------------
+r250 | sam | 2004-03-11 19:21:55 +0100 (Thu, 11 Mar 2004) | 4 lines
+Changed paths:
+   M /trunk/src/loadlib.c
+
+  * src/loadlib.c:
+    + Use the internal Get_String() function to allocate a C string from
+      library objects, since Elk strings are not null-terminated.
+
+------------------------------------------------------------------------
+r249 | sam | 2004-01-29 14:55:42 +0100 (Thu, 29 Jan 2004) | 3 lines
+Changed paths:
+   M /trunk/src/math.c
+
+  * src/math.c:
+    + If one of the factors is the exact zero, the result yields exact zero.
+
+------------------------------------------------------------------------
+r248 | sam | 2004-01-19 20:29:59 +0100 (Mon, 19 Jan 2004) | 3 lines
+Changed paths:
+   M /trunk/AUTHORS
+   M /trunk/include/extern.h
+   M /trunk/src/math.c
+   M /trunk/src/prim.c
+
+  * include/extern.h:
+    + Export P_Pow to applications.
+
+------------------------------------------------------------------------
+r247 | sam | 2003-12-31 18:40:24 +0100 (Wed, 31 Dec 2003) | 3 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/rules
+
+  * debian/rules:
+    + Added touch calls to avoid build failures due to clock skews.
+
+------------------------------------------------------------------------
+r246 | sam | 2003-12-31 18:21:21 +0100 (Wed, 31 Dec 2003) | 5 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/debian/control
+
+  * debian/control:
+    + Switched back to libelf; elfutils is rather non-free.
+  * configure.ac:
+    + Don't assume -lXt when checking for -lX11.
+
+------------------------------------------------------------------------
+r245 | sam | 2003-12-08 11:48:49 +0100 (Mon, 08 Dec 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * configure.ac: Added an additional level of quoting (from the FreeBSD port).
+
+------------------------------------------------------------------------
+r244 | sam | 2003-12-08 11:48:14 +0100 (Mon, 08 Dec 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+
+  * Updated ChangeLog.
+
+------------------------------------------------------------------------
+r242 | sam | 2003-12-05 13:35:48 +0100 (Fri, 05 Dec 2003) | 2 lines
+Changed paths:
+   M /trunk/NEWS
+   M /trunk/debian/changelog
+
+  * Prepared release 3.99.6.
+
+------------------------------------------------------------------------
+r241 | sam | 2003-12-03 13:49:02 +0100 (Wed, 03 Dec 2003) | 3 lines
+Changed paths:
+   M /trunk/examples/tests/r4rstest.scm
+
+  * examples/tests/r4rstest.scm:
+    + Updated Aubrey Jaffers' R4RS compliance test.
+
+------------------------------------------------------------------------
+r233 | sam | 2003-11-26 18:50:30 +0100 (Wed, 26 Nov 2003) | 3 lines
+Changed paths:
+   M /trunk/AUTHORS
+   M /trunk/configure.ac
+
+  * configure.ac:
+    + Fix by Phillip Rulon for uninitialised $prefix.
+
+------------------------------------------------------------------------
+r232 | sam | 2003-11-06 11:22:44 +0100 (Thu, 06 Nov 2003) | 2 lines
+Changed paths:
+   M /trunk/bootstrap
+
+  * bootstrap: remove autom4te.cache before running autoconf.
+
+------------------------------------------------------------------------
+r231 | sam | 2003-10-13 11:23:47 +0200 (Mon, 13 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+
+  * Minor Debian release.
+
+------------------------------------------------------------------------
+r230 | sam | 2003-10-10 14:40:37 +0200 (Fri, 10 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+
+  * New Debian upload.
+
+------------------------------------------------------------------------
+r229 | sam | 2003-10-07 21:20:35 +0200 (Tue, 07 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Only look for kernel32.dll if the target is windows.
+
+------------------------------------------------------------------------
+r228 | sam | 2003-10-06 02:19:21 +0200 (Mon, 06 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Fixed the invalid -lXt check, that was causing the -lXaw check to fail.
+
+------------------------------------------------------------------------
+r227 | sam | 2003-10-06 00:52:37 +0200 (Mon, 06 Oct 2003) | 5 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/libelk.c
+   M /trunk/src/loadlib.c
+
+  * src/libelk.c:
+    + Test for HAVE_STRUCT_RLIMIT, not HAVE_GETRLIMIT.
+  * src/loadlib.c:
+    + Style fixes.
+
+------------------------------------------------------------------------
+r226 | sam | 2003-10-05 23:05:11 +0200 (Sun, 05 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Minor typo fix (cosmetic).
+
+------------------------------------------------------------------------
+r225 | sam | 2003-10-05 15:11:41 +0200 (Sun, 05 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/loadlib.c
+
+  * Support for the BeOS dynamic loader.
+
+------------------------------------------------------------------------
+r224 | sam | 2003-10-05 00:28:49 +0200 (Sun, 05 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/src/loadlib.c
+
+  * Fixed a stupid bug in the HP-UX dynamic code loading.
+
+------------------------------------------------------------------------
+r223 | sam | 2003-10-05 00:27:57 +0200 (Sun, 05 Oct 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/configure.ac
+   M /trunk/debian/changelog
+
+  * Working on 3.99.6.
+
+------------------------------------------------------------------------
+r222 | sam | 2003-09-30 04:00:20 +0200 (Tue, 30 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/xwidgets/Makefile.am
+
+  * Do not fail if -lXmu is not present; -lXt should be enough.
+
+------------------------------------------------------------------------
+r221 | sam | 2003-09-28 15:05:38 +0200 (Sun, 28 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/NEWS
+   M /trunk/build-win32
+   M /trunk/debian/changelog
+
+  * Release 3.99.5.
+
+------------------------------------------------------------------------
+r220 | sam | 2003-09-28 14:49:25 +0200 (Sun, 28 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/COPYING
+   M /trunk/MACHINES
+
+  * Removed deprecated notes from MACHINES
+  * Added $Id to COPYING and removed date information.
+
+------------------------------------------------------------------------
+r219 | sam | 2003-09-28 13:22:30 +0200 (Sun, 28 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/examples/tests/Makefile.am
+   M /trunk/examples/tests/r4rstest.scm
+
+  * r4rstest.scm is the original test again, we add extra tests at build time
+    in a generated file.
+  * Fixed a $(srcdir) / $(builddir) confusion.
+
+------------------------------------------------------------------------
+r218 | sam | 2003-09-28 13:15:47 +0200 (Sun, 28 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/man/Makefile.am
+   M /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix/Makefile.am
+   M /trunk/doc/usenix/Makefile.am
+   M /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt/Makefile.am
+
+  * Fixed a couple of $(srcdir) / $(builddir) mistakes in the doc rules.
+
+------------------------------------------------------------------------
+r217 | sam | 2003-09-28 12:12:49 +0200 (Sun, 28 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/examples/tests/Makefile.am
+
+  * Use printf "" instead of touch to create timestamps because of systems
+    where touch does not create the file.
+
+------------------------------------------------------------------------
+r216 | sam | 2003-09-28 12:00:48 +0200 (Sun, 28 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/xwidgets.scm
+
+  * Fixed xaw.la and motif.la loading.
+
+------------------------------------------------------------------------
+r215 | sam | 2003-09-28 12:00:26 +0200 (Sun, 28 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/Makefile.am
+   A /trunk/lib/xwidgets/error.c (from /trunk/lib/xwidgets/xterror.c:214)
+   A /trunk/lib/xwidgets/init.c (from /trunk/lib/xwidgets/xtinit.c:214)
+   A /trunk/lib/xwidgets/objects.c (from /trunk/lib/xwidgets/xtobjects.c:214)
+   D /trunk/lib/xwidgets/xterror.c
+   D /trunk/lib/xwidgets/xtinit.c
+   D /trunk/lib/xwidgets/xtobjects.c
+
+  * Renamed xt*.c to *.c, because it is their original name in Elk 3.0.
+
+------------------------------------------------------------------------
+r214 | sam | 2003-09-28 11:57:09 +0200 (Sun, 28 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/mkwidget.scm
+   A /trunk/lib/xwidgets/motif/Makefile.am
+   A /trunk/lib/xwidgets/motif/init.c
+   A /trunk/lib/xwidgets/xaw/Makefile.am
+   A /trunk/lib/xwidgets/xaw/init.c
+   M /trunk/lib/xwidgets/xt.h
+
+  * Split the common part of the xaw and motif plugins into a separate
+    libelk-xt shared library.
+
+------------------------------------------------------------------------
+r213 | sam | 2003-09-28 11:50:15 +0200 (Sun, 28 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xlib/Makefile.am
+   A /trunk/lib/xlib/init.c (from /trunk/lib/xlib/plugin.c:212)
+   D /trunk/lib/xlib/plugin.c
+
+  * Renamed plugin.c to init.c to match the xt plugin.
+
+------------------------------------------------------------------------
+r212 | sam | 2003-09-27 17:20:14 +0200 (Sat, 27 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/lib/xlib/Makefile.am
+   A /trunk/lib/xlib/error.c (from /trunk/lib/xlib/xerror.c:192)
+   A /trunk/lib/xlib/objects.c (from /trunk/lib/xlib/xobjects.c:192)
+   A /trunk/lib/xlib/plugin.c (from /trunk/lib/xlib/xinit.c:192)
+   D /trunk/lib/xlib/xerror.c
+   D /trunk/lib/xlib/xinit.c
+   M /trunk/lib/xlib/xlib.h
+   D /trunk/lib/xlib/xobjects.c
+
+  * Split the xlib.la module into a shared library and a module, so that the
+    shared library can be used by the xaw and motif modules (which I am going
+    to split as well).
+
+------------------------------------------------------------------------
+r211 | sam | 2003-09-27 16:41:16 +0200 (Sat, 27 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Fixed a syntax error.
+
+------------------------------------------------------------------------
+r210 | sam | 2003-09-27 14:34:27 +0200 (Sat, 27 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/motif
+   M /trunk/lib/xwidgets/xaw
+
+  * Ask SVN to ignore the .dirstamp entry.
+
+------------------------------------------------------------------------
+r209 | sam | 2003-09-27 14:30:10 +0200 (Sat, 27 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/cprog/Makefile.am
+
+  * Replaced a GNU sed syntax with two combined grep + sed calls.
+
+------------------------------------------------------------------------
+r208 | sam | 2003-09-27 14:07:13 +0200 (Sat, 27 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix/Makefile.am
+   M /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt/Makefile.am
+
+  * Use $(AWK) instead of awk.
+
+------------------------------------------------------------------------
+r207 | sam | 2003-09-27 14:05:59 +0200 (Sat, 27 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/doc/util/mkindex.awk
+
+  * Changed the recursion into an iteration so that we don't use awk functions
+    and it properly works with the Solaris implementation.
+
+------------------------------------------------------------------------
+r206 | sam | 2003-09-26 19:58:08 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/unix/process.c
+
+  * Use __environ instead of environ on platforms where it exists.
+
+------------------------------------------------------------------------
+r205 | sam | 2003-09-26 19:54:52 +0200 (Fri, 26 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/mkwidget.scm
+   D /trunk/lib/xwidgets/motif/Makefile.am
+   D /trunk/lib/xwidgets/motif/init.c
+   D /trunk/lib/xwidgets/xaw/Makefile.am
+   D /trunk/lib/xwidgets/xaw/init.c
+   M /trunk/lib/xwidgets/xtinit.c
+   M /trunk/scm/xwidgets.scm
+
+  * Merged the *-xt.la and *-widgets.la module pairs into one *.la to avoid
+    undefined symbols.
+
+------------------------------------------------------------------------
+r204 | sam | 2003-09-26 18:23:47 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/unix/process.c
+
+  * Fixed environ detection under OS X.
+
+------------------------------------------------------------------------
+r203 | sam | 2003-09-26 18:21:24 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/examples/Makefile.am
+   M /trunk/examples/tests
+   A /trunk/examples/tests/Makefile.am
+   M /trunk/examples/tests/r4rstest.scm
+
+  * We run r4rstest.scm after having built elk.
+
+------------------------------------------------------------------------
+r202 | sam | 2003-09-26 17:57:43 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Fixed shell syntax (if "foo" = "bar" instead of if test "foo" = "bar").
+
+------------------------------------------------------------------------
+r201 | sam | 2003-09-26 17:42:13 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Don't build the Xaw and Motif plugins when cross-compiling.
+
+------------------------------------------------------------------------
+r200 | sam | 2003-09-26 17:33:30 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/unix/process.c
+
+  * Fixed linking on OS X.
+
+------------------------------------------------------------------------
+r199 | sam | 2003-09-26 17:32:16 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/unix/process.c
+
+  * Disabled the use of environ on OS X.
+
+------------------------------------------------------------------------
+r198 | sam | 2003-09-26 17:03:20 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * Call Elk with case-sensitive symbols when building code.
+
+------------------------------------------------------------------------
+r197 | sam | 2003-09-26 17:02:53 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/misc.h
+   M /trunk/src/heap-sc.c
+   M /trunk/src/libelk.c
+   M /trunk/src/list.c
+
+  * Renamed ALIGN into ELK_ALIGN because OS X's <ppc/param.h> defines it.
+
+------------------------------------------------------------------------
+r196 | sam | 2003-09-26 14:28:31 +0200 (Fri, 26 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/io.c
+
+  * Removed compile-time checks for _SC_OPEN_MAX, _PC_PATH_MAX and _SC_PAGESIZE
+    and used simple build-time #ifdefs.
+
+------------------------------------------------------------------------
+r195 | sam | 2003-09-26 14:17:33 +0200 (Fri, 26 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/include/misc.h
+
+  * Added '\r' to the list of whitespace characters, as in the patch I found
+    on http://verno.ueda.info.waseda.ac.jp/network/patch-z .
+
+------------------------------------------------------------------------
+r194 | sam | 2003-09-26 14:13:29 +0200 (Fri, 26 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/COPYING
+   M /trunk/debian/copyright
+
+  * Added my copyright to the license.
+  * Removed useless stuff from debian/copyright.
+
+------------------------------------------------------------------------
+r193 | sam | 2003-09-26 11:18:39 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk
+
+  * Ignore the INSTALL file.
+
+------------------------------------------------------------------------
+r192 | sam | 2003-09-26 11:11:20 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/BUGS
+   M /trunk/src/math.c
+
+  * Fixed the bignum/double comparisons.
+
+------------------------------------------------------------------------
+r191 | sam | 2003-09-26 11:10:53 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/bool.c
+
+  * Fixed a minor compilation warning.
+
+------------------------------------------------------------------------
+r190 | sam | 2003-09-26 03:27:04 +0200 (Fri, 26 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/tests/r4rstest.scm
+
+  * Updated Aubrey's r4rs conformance test which now features my suggestion.
+
+------------------------------------------------------------------------
+r189 | sam | 2003-09-25 15:28:07 +0200 (Thu, 25 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/object.h
+   M /trunk/lib/xlib/property.c
+
+  * Replaced short with int16_t where necessary.
+
+------------------------------------------------------------------------
+r188 | sam | 2003-09-25 15:04:01 +0200 (Thu, 25 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/Makefile.am
+   A /trunk/examples/tests
+   A /trunk/examples/tests/README
+   A /trunk/examples/tests/r4rstest.scm
+
+  * Added the r4rstest.scm compliance test, with a minor addition.
+
+------------------------------------------------------------------------
+r187 | sam | 2003-09-24 20:49:46 +0200 (Wed, 24 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/bool.c
+
+  * According to r4rs section 6.2, (eqv? 1 1.0) returns #f.
+
+------------------------------------------------------------------------
+r186 | sam | 2003-09-24 19:42:55 +0200 (Wed, 24 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/object.h
+
+  * BigNums now use uint16_t, not unsigned short.
+
+------------------------------------------------------------------------
+r185 | sam | 2003-09-24 18:32:46 +0200 (Wed, 24 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/BUGS
+   M /trunk/src/special.c
+
+  * Fixed scope of named let variables, fixing the bug described here:
+    http://groups.google.com/groups?selm=871zemtmd4.fsf%40app.dial.idiom.com
+
+------------------------------------------------------------------------
+r184 | sam | 2003-09-24 17:14:16 +0200 (Wed, 24 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/unix/process.c
+
+  * Fixed the check for "environ" on OS X and Solaris.
+
+------------------------------------------------------------------------
+r183 | sam | 2003-09-24 11:19:40 +0200 (Wed, 24 Sep 2003) | 2 lines
+Changed paths:
+   D /trunk/INSTALL
+   M /trunk/bootstrap
+
+  * Removed INSTALL from repository, automake installs it for us.
+
+------------------------------------------------------------------------
+r182 | sam | 2003-09-24 11:15:37 +0200 (Wed, 24 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/BUGS
+
+  * New bugs.
+
+------------------------------------------------------------------------
+r181 | sam | 2003-09-24 11:14:51 +0200 (Wed, 24 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/AUTHORS
+   M /trunk/include/site.h.in
+
+  * extern_c should expand to extern in C, not to /* */, thanks to Mark Sapa.
+
+------------------------------------------------------------------------
+r180 | sam | 2003-09-23 14:16:43 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/libelk.c
+
+  * Case-insensitive symbols by default.
+
+------------------------------------------------------------------------
+r179 | sam | 2003-09-23 14:16:22 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/site.h.in
+   M /trunk/src/bignum.c
+
+  * Use DBL_MAX instead of HUGE_VAL for float precision when available.
+
+------------------------------------------------------------------------
+r178 | sam | 2003-09-23 14:15:36 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/math.c
+
+  * Promoted precision in Float->String transformations.
+
+------------------------------------------------------------------------
+r177 | sam | 2003-09-23 00:54:22 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/prim.c
+   M /trunk/src/special.c
+
+  * Empty (begin), (begin1) and (cond) return #<unspecified>.
+
+------------------------------------------------------------------------
+r176 | sam | 2003-09-23 00:47:03 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/print.c
+
+  * Display #<foo> instead of #[foo], to mimic Guile's output.
+
+------------------------------------------------------------------------
+r175 | sam | 2003-09-23 00:46:24 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/extern.h
+   M /trunk/include/object.h
+   M /trunk/src/symbol.c
+
+  * Added the "unspecified" type.
+
+------------------------------------------------------------------------
+r174 | sam | 2003-09-23 00:44:19 +0200 (Tue, 23 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/NEWS
+
+  * Fixed fucked up ChangeLog and NEWS files.
+
+------------------------------------------------------------------------
+r173 | sam | 2003-09-22 19:00:33 +0200 (Mon, 22 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Linux compilation fix.
+
+------------------------------------------------------------------------
+r172 | sam | 2003-09-20 05:25:58 +0200 (Sat, 20 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/lib/misc/bitstring.c
+
+  * Fixed the bitstring->unsigned-integer return value with a patch
+    from David Marmor.
+
+------------------------------------------------------------------------
+r171 | sam | 2003-09-20 04:27:44 +0200 (Sat, 20 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/NEWS
+   M /trunk/configure.ac
+
+  * Fixed the CXX check.
+  * Updated NEWS.
+
+------------------------------------------------------------------------
+r170 | sam | 2003-09-20 03:13:14 +0200 (Sat, 20 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/NEWS
+   M /trunk/configure.ac
+
+  * 3.99.4 release.
+
+------------------------------------------------------------------------
+r169 | sam | 2003-09-20 02:40:33 +0200 (Sat, 20 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/AUTHORS
+
+  * Updated thanks.
+
+------------------------------------------------------------------------
+r168 | sam | 2003-09-19 13:51:12 +0200 (Fri, 19 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/AUTHORS
+
+  * More credits.
+
+------------------------------------------------------------------------
+r167 | sam | 2003-09-19 13:47:51 +0200 (Fri, 19 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/unix/system.c
+
+  * #include <netdb.h> if available, so that Solaris has MAXHOSTNAMELEN.
+
+------------------------------------------------------------------------
+r166 | sam | 2003-09-19 13:46:13 +0200 (Fri, 19 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/loadlib.c
+
+  * Fixed an invalid declaration that prevented compilation on HP-UX.
+
+------------------------------------------------------------------------
+r165 | sam | 2003-09-19 13:45:16 +0200 (Fri, 19 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/lib/misc/regexp.c
+
+  * Fixed function declarations in regexp.c that caused the Win32 plugin
+    to crash.
+
+------------------------------------------------------------------------
+r164 | sam | 2003-09-19 10:54:08 +0200 (Fri, 19 Sep 2003) | 5 lines
+Changed paths:
+   M /trunk/build-win32
+   M /trunk/configure.ac
+   M /trunk/lib/unix/Makefile.am
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/misc.c
+   M /trunk/lib/unix/passwd.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/signal.c
+   M /trunk/lib/unix/system.c
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/unix/wait.c
+   M /trunk/lib/xlib/Makefile.am
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * Added -no-undefined to all plugins' LDFLAGS.
+  * Disabled most of the unix plugin code under Windows.
+  * Replaced remaining index/rindex calls with strchr/strrchr.
+  * Updated the Win32 build.
+
+------------------------------------------------------------------------
+r163 | sam | 2003-09-17 15:29:39 +0200 (Wed, 17 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/loadlib.c
+
+  * Fixed the / and \ issues in path separators.
+  * Use strchr/strrchr instead of index/rindex.
+
+------------------------------------------------------------------------
+r162 | sam | 2003-09-17 15:18:59 +0200 (Wed, 17 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/extern.h
+   M /trunk/include/misc.h
+   M /trunk/include/site.h.in
+   M /trunk/lib/misc/Makefile.am
+   M /trunk/src/Makefile.am
+
+  * Proper DLL symbol exporting under Win32.
+
+------------------------------------------------------------------------
+r161 | sam | 2003-09-17 14:01:49 +0200 (Wed, 17 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/xlib/xinit.c
+   M /trunk/lib/xwidgets/motif/init.c
+   M /trunk/lib/xwidgets/xaw/init.c
+   M /trunk/lib/xwidgets/xtinit.c
+   M /trunk/scm/bitstring.scm
+   M /trunk/scm/gdbmtest.scm
+   M /trunk/scm/oops.scm
+   M /trunk/scm/record.scm
+   M /trunk/scm/regexp.scm
+   M /trunk/scm/struct.scm
+   M /trunk/scm/unix.scm
+   M /trunk/scm/xlib.scm
+   M /trunk/scm/xwidgets.scm
+   M /trunk/src/load.c
+   M /trunk/src/loadlib.c
+
+  * Do not open .so files, but look for the libtool .la library instead and
+    get the shared object's filename from it.
+
+------------------------------------------------------------------------
+r160 | sam | 2003-09-17 04:26:57 +0200 (Wed, 17 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/loadlib.c
+   M /trunk/src/stab-vanilla.c
+
+  * Typos and coding style.
+
+------------------------------------------------------------------------
+r159 | sam | 2003-09-17 04:26:18 +0200 (Wed, 17 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/Makefile.am
+
+  * Fixed the distribution of .scm files that weren't installed.
+
+------------------------------------------------------------------------
+r158 | sam | 2003-09-15 14:53:36 +0200 (Mon, 15 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/cstring.h
+   M /trunk/include/extern.h
+   M /trunk/include/intern.h
+   M /trunk/include/object.h
+   M /trunk/lib/misc/monitor.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/system.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/xlib/graphics.c
+   M /trunk/lib/xlib/pixmap.c
+   M /trunk/lib/xlib/type.c
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/lib/xwidgets/motif/support.d
+   M /trunk/lib/xwidgets/widget.c
+   M /trunk/src/bool.c
+   M /trunk/src/cont.c
+   M /trunk/src/cstring.c
+   M /trunk/src/dump-hp9k.c
+   M /trunk/src/feature.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/io.c
+   M /trunk/src/list.c
+   M /trunk/src/load.c
+   M /trunk/src/print.c
+   M /trunk/src/stab-bsd.c
+   M /trunk/src/stab-ecoff.c
+   M /trunk/src/stab-elf.c
+   M /trunk/src/stab-hp9k300.c
+   M /trunk/src/stab-hp9k800.c
+   M /trunk/src/string.c
+   M /trunk/src/symbol.c
+   M /trunk/src/vector.c
+
+  * Fixed all signed/unsigned and undeclared function warnings.
+
+------------------------------------------------------------------------
+r157 | sam | 2003-09-15 13:47:51 +0200 (Mon, 15 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/NEWS
+   M /trunk/configure.ac
+   M /trunk/debian/changelog
+
+  * Minor 3.99.3 release.
+
+------------------------------------------------------------------------
+r156 | sam | 2003-09-15 13:09:21 +0200 (Mon, 15 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/misc/Makefile.am
+
+  * Disabled the monitor plugin because it relies on specific gcc features.
+
+------------------------------------------------------------------------
+r155 | sam | 2003-09-15 11:12:16 +0200 (Mon, 15 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/man/Makefile.am
+
+  * Fixed the manpage directory.
+
+------------------------------------------------------------------------
+r154 | sam | 2003-09-15 10:59:33 +0200 (Mon, 15 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/doc/man/Makefile.am
+   M /trunk/src/Makefile.am
+
+  * Use install-{exec,data}-hook instead of -local so that target directories
+    already exist when the rule is called.
+
+------------------------------------------------------------------------
+r153 | sam | 2003-09-15 10:52:09 +0200 (Mon, 15 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/man/Makefile.am
+   M /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix/Makefile.am
+   M /trunk/doc/usenix/Makefile.am
+   M /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt/Makefile.am
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * **/Makefile.am: Use CLEANFILES instead of a new clean rule to remove
+    temporary files generated at build time.
+
+------------------------------------------------------------------------
+r152 | sam | 2003-09-15 10:46:36 +0200 (Mon, 15 Sep 2003) | 7 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/rules
+   M /trunk/doc/man/Makefile.am
+   M /trunk/src/Makefile.am
+
+  * src/Makefile.am, doc/man/Makefile.am:
+    + Create symlinks at install time.
+  * debian/rules:
+    + Moved manpages to /usr/share/man (Closes: #210894).
+    + Ignore plugins in the dh_makeshlibs call.
+    + Removed the elk->scheme-elk link, it is done at make install time.
+
+------------------------------------------------------------------------
+r151 | sam | 2003-09-13 08:33:51 +0200 (Sat, 13 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/NEWS
+   M /trunk/build-win32
+   M /trunk/debian/changelog
+
+  * The 3.99.2 release is now ready.
+
+------------------------------------------------------------------------
+r150 | sam | 2003-09-13 08:31:24 +0200 (Sat, 13 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/loadlib.c
+
+  * Plugin support for Win32.
+
+------------------------------------------------------------------------
+r149 | sam | 2003-09-13 02:35:20 +0200 (Sat, 13 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   A /trunk/build-win32
+
+  * Quick and dirty .zip generator for the Win32 version.
+
+------------------------------------------------------------------------
+r148 | sam | 2003-09-13 02:34:58 +0200 (Sat, 13 Sep 2003) | 5 lines
+Changed paths:
+   M /trunk/include/intern.h
+   M /trunk/src/Makefile.am
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/load.c
+
+  * Removed references to NOMAIN.
+  * Replaced / with \ under Win32.
+  * The Win32 version looks for .scm files in the scm subdirectory of the
+    executable's current directory.
+
+------------------------------------------------------------------------
+r147 | sam | 2003-09-11 22:46:50 +0200 (Thu, 11 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/bitstring
+   M /trunk/doc/cprog
+   M /trunk/doc/kernel
+   M /trunk/doc/man
+   M /trunk/doc/oops
+   M /trunk/doc/record
+   M /trunk/doc/regexp
+   M /trunk/doc/unix
+   M /trunk/doc/usenix
+   M /trunk/doc/xlib
+   M /trunk/doc/xt
+
+  * Made SVN ignore temporary files.
+
+------------------------------------------------------------------------
+r146 | sam | 2003-09-11 22:44:17 +0200 (Thu, 11 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/debian/changelog
+
+  * Preparing new release.
+
+------------------------------------------------------------------------
+r145 | sam | 2003-09-11 12:09:27 +0200 (Thu, 11 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/main.c
+
+  * Allocate a console under Win32, and wait for user input before closing it.
+
+------------------------------------------------------------------------
+r144 | sam | 2003-09-11 10:47:10 +0200 (Thu, 11 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/rules
+   M /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/man/Makefile.am
+   M /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix/Makefile.am
+   M /trunk/doc/usenix/Makefile.am
+   M /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt/Makefile.am
+
+  * Install PostScript documentation into /usr/share/doc/elk/ps/.
+
+------------------------------------------------------------------------
+r143 | sam | 2003-09-11 10:21:49 +0200 (Thu, 11 Sep 2003) | 9 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/debian/control
+   M /trunk/debian/elkdoc.docs
+   M /trunk/debian/rules
+   M /trunk/doc/bitstring/Makefile.am
+   D /trunk/doc/bitstring/bitstring.ps
+   M /trunk/doc/cprog/Makefile.am
+   D /trunk/doc/cprog/cprog.ps
+   M /trunk/doc/kernel/Makefile.am
+   D /trunk/doc/kernel/kernel.ps
+   M /trunk/doc/man/Makefile.am
+   D /trunk/doc/man/elk.ps
+   M /trunk/doc/oops/Makefile.am
+   D /trunk/doc/oops/oops.ps
+   M /trunk/doc/record/Makefile.am
+   D /trunk/doc/record/record.ps
+   M /trunk/doc/regexp/Makefile.am
+   D /trunk/doc/regexp/regexp.ps
+   M /trunk/doc/unix/Makefile.am
+   D /trunk/doc/unix/unix.ps
+   M /trunk/doc/usenix/Makefile.am
+   D /trunk/doc/usenix/usenix.ps
+   M /trunk/doc/xlib/Makefile.am
+   D /trunk/doc/xlib/xlib.ps
+   M /trunk/doc/xt/Makefile.am
+   D /trunk/doc/xt/xt.ps
+
+  * configure.ac:
+    + Check for awk and groff.
+    + Only build documentation if groff was found.
+  * debian/rules:
+    + Move .ps documentation to the elkdoc package.
+  * doc/*:
+    + Removed *.ps files from CVS.
+    + Added proper build rules for *.ps files.
+
+------------------------------------------------------------------------
+r142 | sam | 2003-09-11 08:57:26 +0200 (Thu, 11 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/load.c
+
+  * Renamed OBJ_DIR into LIB_DIR.
+  * Fixed SCM_DIR and LIB_DIR so that they take ${prefix} into account.
+  * Added -I $(top_builddir)/include to INCLUDES.
+
+------------------------------------------------------------------------
+r141 | sam | 2003-09-11 01:26:02 +0200 (Thu, 11 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/main.c
+
+  * Allocate a DOS command window under Win32.
+
+------------------------------------------------------------------------
+r140 | sam | 2003-09-11 00:40:44 +0200 (Thu, 11 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Fix HP-UX crashes by defining ARRAY_BROKEN on this platform.
+
+------------------------------------------------------------------------
+r139 | sam | 2003-09-10 17:10:11 +0200 (Wed, 10 Sep 2003) | 6 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/object.h
+   M /trunk/include/site.h.in
+
+  * configure.ac:
+    + Prefer the C99 inttypes.h rather than stdint.h.
+    + Use AC_FUNC_ALLOCA instead of AC_CHECK_FUNCS(alloca).
+  * include/object.h:
+    + Removed a legacy #include <stdint.h>.
+
+------------------------------------------------------------------------
+r138 | sam | 2003-09-10 17:08:00 +0200 (Wed, 10 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/BUGS
+   M /trunk/src/heap-gen.c
+
+  * Fixed a bug in the garbage collector.
+
+------------------------------------------------------------------------
+r137 | sam | 2003-09-10 01:13:50 +0200 (Wed, 10 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/xlib/property.c
+   M /trunk/lib/xwidgets/context.c
+   M /trunk/lib/xwidgets/function.c
+   M /trunk/lib/xwidgets/resource.c
+   M /trunk/src/bool.c
+   M /trunk/src/symbol.c
+
+  * Replaced bcopy/bzero/bcmp with memcpu/memeset/memcmp.
+
+------------------------------------------------------------------------
+r136 | sam | 2003-09-09 22:58:45 +0200 (Tue, 09 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/Makefile.am
+
+  * Do not recurse into util/ since we no longer need to build mkindex.
+
+------------------------------------------------------------------------
+r135 | sam | 2003-09-09 22:57:43 +0200 (Tue, 09 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/util/Makefile.am
+   A /trunk/doc/util/mkindex.awk
+   D /trunk/doc/util/mkindex.c
+
+  * Rewrote mkindex.c in awk.
+
+------------------------------------------------------------------------
+r134 | sam | 2003-09-09 21:22:37 +0200 (Tue, 09 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/util/mkindex.c
+
+  * Added comments to mkindex.c, to make its conversion easier.
+
+------------------------------------------------------------------------
+r133 | sam | 2003-09-09 20:40:42 +0200 (Tue, 09 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src
+
+  * Hide elk.exe from SVN, now that the cygwin and mingw32 ports work.
+
+------------------------------------------------------------------------
+r132 | sam | 2003-09-09 20:35:16 +0200 (Tue, 09 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/math.c
+
+  * Do not declare random(), in case the prototype changes.
+
+------------------------------------------------------------------------
+r131 | sam | 2003-09-09 18:52:37 +0200 (Tue, 09 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/libelk.c
+
+  * Fixed a typo preventing the inclusion of sys/resource.h.
+
+------------------------------------------------------------------------
+r130 | sam | 2003-09-09 17:18:55 +0200 (Tue, 09 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/exception.h
+   M /trunk/include/intern.h
+   M /trunk/include/object.h
+   M /trunk/include/scheme.h
+   M /trunk/include/stkmem.h
+   M /trunk/lib/unix/signal.c
+   M /trunk/src/cont.c
+   M /trunk/src/exception.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/heap-sc.c
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/proc.c
+   M /trunk/src/read.c
+   M /trunk/src/stkmem.c
+
+  * Added more system checks.
+  * Now builds on Win32.
+
+------------------------------------------------------------------------
+r129 | sam | 2003-09-09 15:30:23 +0200 (Tue, 09 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/loadlib.c
+
+  * Enhanced the dlopen() checks, especially for platforms that do not
+    need -ldl.
+  * Ported the plugin loading code to the HP-UX shl_load() system.
+
+------------------------------------------------------------------------
+r128 | sam | 2003-09-09 14:07:48 +0200 (Tue, 09 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/bootstrap
+
+  * Code clean-up.
+  * Made bootstrap work on OS X, by calling glibtoolize instead of libtoolize.
+
+------------------------------------------------------------------------
+r127 | sam | 2003-09-08 00:33:32 +0200 (Mon, 08 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/NEWS
+
+  * Updated ChangeLog and NEWS for the 3.99.1 release.
+
+------------------------------------------------------------------------
+r126 | sam | 2003-09-08 00:10:41 +0200 (Mon, 08 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+
+  * Updated ChangeLog.
+
+------------------------------------------------------------------------
+r125 | sam | 2003-09-08 00:07:33 +0200 (Mon, 08 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/loadlib.c
+
+  * Implemented the dyld plugin loader for OS X.
+
+------------------------------------------------------------------------
+r124 | sam | 2003-09-07 22:23:47 +0200 (Sun, 07 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Added a check for Darwin's dyld API, that we'll prefer over dlopen.
+
+------------------------------------------------------------------------
+r123 | sam | 2003-09-07 16:41:10 +0200 (Sun, 07 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * Fixed the build of the xaw plugin.
+
+------------------------------------------------------------------------
+r122 | sam | 2003-09-07 16:28:01 +0200 (Sun, 07 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/print.c
+   M /trunk/src/read.c
+
+  * Fixed many tests for termio.h, termios.h, TIOCFLUSH, etc.
+
+------------------------------------------------------------------------
+r121 | sam | 2003-09-07 15:13:18 +0200 (Sun, 07 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/src/Makefile.am
+   M /trunk/src/loadlib.c
+   D /trunk/src/stab-unix.c
+   A /trunk/src/stab-vanilla.c (from /trunk/src/stab-unix.c:119)
+
+  * Renamed stab-unix.c to stab-vanilla.c.
+  * Implemented string parsing in stab-vanilla.c, so that libelf is no
+    longer required.
+
+------------------------------------------------------------------------
+r120 | sam | 2003-09-07 15:12:27 +0200 (Sun, 07 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/src/stab.c
+
+  * Fixed a crash for symbols found in the list but that dlopen() could not
+    properly load.
+
+------------------------------------------------------------------------
+r119 | sam | 2003-09-07 13:25:04 +0200 (Sun, 07 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/src/Makefile.am
+   M /trunk/src/stab-elf.c
+   A /trunk/src/stab-unix.c
+   M /trunk/src/stab.c
+
+  * Disabled non-libelf stab files.
+  * Added a stab-unix.c file which is a placeholder for future nm|objdump
+    implementations.
+
+------------------------------------------------------------------------
+r118 | sam | 2003-09-07 13:18:38 +0200 (Sun, 07 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Fixed a typo in the configuration summary.
+
+------------------------------------------------------------------------
+r117 | sam | 2003-09-07 11:56:55 +0200 (Sun, 07 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/loadlib.c
+
+  * Oops, fixed a misplaced #ifdef.
+
+------------------------------------------------------------------------
+r116 | sam | 2003-09-07 11:55:56 +0200 (Sun, 07 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/src/Makefile.am
+   M /trunk/src/feature.c
+   M /trunk/src/libelk.c
+   D /trunk/src/load-dl.c
+   D /trunk/src/load-ld.c
+   D /trunk/src/load-rld.c
+   D /trunk/src/load-shl.c
+   M /trunk/src/load.c
+   A /trunk/src/loadlib.c (from /trunk/src/load-dl.c:107)
+   M /trunk/src/stab.c
+
+  * Renamed load-dl.c into loadlib.c.
+  * Removed support for bizarre dynamic linkers, will re-add them later.
+  * Removed support for object linking with ld.
+
+------------------------------------------------------------------------
+r115 | sam | 2003-09-07 03:33:17 +0200 (Sun, 07 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/load.c
+
+  * Got rid of CAN_LOAD_OBJ. We'll only use dlopen()-like functions now.
+
+------------------------------------------------------------------------
+r114 | sam | 2003-09-06 18:19:02 +0200 (Sat, 06 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/src/Makefile.am
+
+  * Removed the hardcoded -lelf from src/Makefile.am.
+  * Moved the hardcoded -lm -ldl from src/Makefile.am to configure.ac.
+
+------------------------------------------------------------------------
+r113 | sam | 2003-09-06 18:05:42 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Conditionally define CAN_DUMP, CAN_LOAD_OBJ and CAN_LOAD_LIB.
+
+------------------------------------------------------------------------
+r112 | sam | 2003-09-06 18:05:13 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/libelk.c
+
+  * Fixed a compile problem when CAN_DUMP is not defined.
+
+------------------------------------------------------------------------
+r111 | sam | 2003-09-06 17:43:16 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/dump.c
+
+  * Fixed typo (HAVE_ELF/HAVE_LIBELF).
+
+------------------------------------------------------------------------
+r110 | sam | 2003-09-06 17:41:48 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/heap-gen.c
+
+  * Renamed "link" into "linked" because of namespace collision with libc.
+
+------------------------------------------------------------------------
+r109 | sam | 2003-09-06 17:30:43 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/misc.h
+   M /trunk/include/object.h
+   M /trunk/src/dump-elf.c
+   M /trunk/src/dump.c
+   M /trunk/src/env.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/heap.c
+   M /trunk/src/libelk.c
+
+  * Replaced ptrdiff_t with intptr_t.
+
+------------------------------------------------------------------------
+r108 | sam | 2003-09-06 17:29:30 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/Makefile.am
+
+  * Removed -DINIT_OBJECTS from the compilation flags.
+
+------------------------------------------------------------------------
+r107 | sam | 2003-09-06 16:46:24 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/include/object.h
+   M /trunk/src/dump-elf.c
+   M /trunk/src/libelk.c
+
+  * <malloc.h> is deprecated, replaced with <stdlib.h>.
+
+------------------------------------------------------------------------
+r106 | sam | 2003-09-06 16:45:29 +0200 (Sat, 06 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/debian/changelog
+   M /trunk/include/kernel.h
+   M /trunk/include/scheme.h
+   M /trunk/src/read.c
+   M /trunk/src/stab.c
+
+  * Checked for libelf, and replaced hardcoded #define ELF with HAVE_LIBELF
+    tests.
+  * #include "site.h" in kernel.h.
+
+------------------------------------------------------------------------
+r105 | sam | 2003-09-06 14:33:55 +0200 (Sat, 06 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/extern.h
+   M /trunk/include/misc.h
+   M /trunk/include/site.h.in
+   M /trunk/src/error.c
+   M /trunk/src/exception.c
+   M /trunk/src/libelk.c
+   M /trunk/src/proc.c
+   M /trunk/src/read.c
+
+  * Removed the autoconf check for __attribute__((noreturn)) and used plain
+    C checks.
+
+------------------------------------------------------------------------
+r104 | sam | 2003-09-06 13:27:05 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   D /trunk/lib/xlib/Include.am
+   M /trunk/lib/xlib/Makefile.am
+
+  * Removed lib/xlib/Include.am because no other plugin needs it.
+
+------------------------------------------------------------------------
+r103 | sam | 2003-09-06 13:25:29 +0200 (Sat, 06 Sep 2003) | 4 lines
+Changed paths:
+   M /trunk/include
+   M /trunk/include/Makefile.am
+   M /trunk/include/kernel.h
+   M /trunk/include/scheme.h
+   A /trunk/include/site.h.in
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/debug.c
+   M /trunk/lib/misc/elk-eval.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/monitor.c
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/src/autoload.c
+   M /trunk/src/bignum.c
+   M /trunk/src/bool.c
+   M /trunk/src/char.c
+   M /trunk/src/cont.c
+   M /trunk/src/cstring.c
+   M /trunk/src/debug.c
+   M /trunk/src/dump.c
+   M /trunk/src/env.c
+   M /trunk/src/error.c
+   M /trunk/src/exception.c
+   M /trunk/src/feature.c
+   M /trunk/src/heap.c
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/list.c
+   M /trunk/src/load.c
+   M /trunk/src/main.c
+   M /trunk/src/malloc.c
+   M /trunk/src/math.c
+   M /trunk/src/onfork.c
+   M /trunk/src/prim.c
+   M /trunk/src/print.c
+   M /trunk/src/proc.c
+   M /trunk/src/promise.c
+   M /trunk/src/read.c
+   M /trunk/src/special.c
+   M /trunk/src/stab.c
+   M /trunk/src/stkmem.c
+   M /trunk/src/string.c
+   M /trunk/src/symbol.c
+   M /trunk/src/terminate.c
+   M /trunk/src/type.c
+   M /trunk/src/vector.c
+
+  * scheme.h and kernel.h no longer include config.h
+  * Hence included config.h in all C files.
+  * Added site.h which will replace config.h for installed headers.
+
+------------------------------------------------------------------------
+r102 | sam | 2003-09-06 13:23:33 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/ChangeLog
+   M /trunk/Makefile.am
+   M /trunk/debian/elk.docs
+   M /trunk/debian/elkdoc.docs
+   M /trunk/debian/rules
+
+  * Added a ChangeLog file (simple "svn log -v").
+
+------------------------------------------------------------------------
+r101 | sam | 2003-09-06 13:20:46 +0200 (Sat, 06 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/scm/Makefile.am
+
+  * Do not distribute xlib.scm if X11 support wasn't found.
+  * Ditto for motif.scm, xaw.scm and xwidgets.scm.
+
+------------------------------------------------------------------------
+r100 | sam | 2003-09-06 13:15:57 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/xlib/Makefile.am
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * Added autoconf checks for -lgdbm, X11, Xaw and Motif.
+
+------------------------------------------------------------------------
+r99 | sam | 2003-09-06 04:33:10 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/extern.h
+   M /trunk/src/error.c
+   M /trunk/src/exception.c
+   M /trunk/src/libelk.c
+   M /trunk/src/proc.c
+   M /trunk/src/read.c
+
+  * Don't use __attribute__ if not using GNU C.
+
+------------------------------------------------------------------------
+r98 | sam | 2003-09-06 04:17:09 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/misc/Makefile.am
+   M /trunk/scm/Makefile.am
+
+  * Don't build gdbm.so if libgdbm isn't found.
+
+------------------------------------------------------------------------
+r97 | sam | 2003-09-06 03:57:13 +0200 (Sat, 06 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/misc/Makefile.am
+
+  * Don't compile newhandler.cpp if no C++ compiler is present.
+
+------------------------------------------------------------------------
+r96 | sam | 2003-09-04 17:46:19 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/Makefile.am
+   D /trunk/debian/README.Debian
+
+  * Removed debian/README.Debian. File locations are no longer debian-related.
+
+------------------------------------------------------------------------
+r95 | sam | 2003-09-04 17:42:28 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/mkwidget.scm
+
+  * Removed ALIASES-related stuff. We're in the XXIst century, dudes.
+
+------------------------------------------------------------------------
+r94 | sam | 2003-09-04 17:33:02 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/util/mkindex.c
+
+  * Fixed some K&R stuff in mkindex.c.
+
+------------------------------------------------------------------------
+r93 | sam | 2003-09-04 17:30:04 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/accelerator.c
+   M /trunk/lib/xwidgets/action.c
+   M /trunk/lib/xwidgets/callback.c
+   M /trunk/lib/xwidgets/class.c
+   M /trunk/lib/xwidgets/classname.c
+   M /trunk/lib/xwidgets/context.c
+   M /trunk/lib/xwidgets/converter.c
+   M /trunk/lib/xwidgets/function.c
+   M /trunk/lib/xwidgets/identifier.c
+   M /trunk/lib/xwidgets/mkwidget.scm
+   M /trunk/lib/xwidgets/motif/init.c
+   M /trunk/lib/xwidgets/motif/list.d
+   M /trunk/lib/xwidgets/motif/row-column.d
+   M /trunk/lib/xwidgets/motif/scale.d
+   M /trunk/lib/xwidgets/motif/scroll-bar.d
+   M /trunk/lib/xwidgets/motif/support.d
+   M /trunk/lib/xwidgets/popup.c
+   M /trunk/lib/xwidgets/resource.c
+   M /trunk/lib/xwidgets/translation.c
+   M /trunk/lib/xwidgets/widget.c
+   M /trunk/lib/xwidgets/xaw/grip.d
+   M /trunk/lib/xwidgets/xaw/init.c
+   M /trunk/lib/xwidgets/xaw/list.d
+   M /trunk/lib/xwidgets/xaw/stripchart.d
+   M /trunk/lib/xwidgets/xterror.c
+   M /trunk/lib/xwidgets/xtinit.c
+   M /trunk/lib/xwidgets/xtobjects.c
+
+  * Muahaha! No more friggin K&R stuff!
+
+------------------------------------------------------------------------
+r92 | sam | 2003-09-04 16:33:43 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/src/io.c
+   M /trunk/src/terminate.c
+
+  * Some bloody K&R function definition were missing.
+
+------------------------------------------------------------------------
+r91 | sam | 2003-09-04 16:32:13 +0200 (Thu, 04 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/lib/xlib/client.c
+   M /trunk/lib/xlib/color.c
+   M /trunk/lib/xlib/colormap.c
+   M /trunk/lib/xlib/cursor.c
+   M /trunk/lib/xlib/display.c
+   M /trunk/lib/xlib/event.c
+   M /trunk/lib/xlib/extension.c
+   M /trunk/lib/xlib/font.c
+   M /trunk/lib/xlib/gcontext.c
+   M /trunk/lib/xlib/grab.c
+   M /trunk/lib/xlib/graphics.c
+   M /trunk/lib/xlib/key.c
+   M /trunk/lib/xlib/pixel.c
+   M /trunk/lib/xlib/pixmap.c
+   M /trunk/lib/xlib/property.c
+   M /trunk/lib/xlib/text.c
+   M /trunk/lib/xlib/type.c
+   M /trunk/lib/xlib/util.c
+   M /trunk/lib/xlib/window.c
+   M /trunk/lib/xlib/wm.c
+   M /trunk/lib/xlib/xerror.c
+   M /trunk/lib/xlib/xinit.c
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/lib/xlib/xobjects.c
+
+  * Fixed compilation warnings.
+  * Removed fucking K&R syntax.
+
+------------------------------------------------------------------------
+r90 | sam | 2003-09-04 16:30:21 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/wait.c
+
+  * Fixed remaining K&R shit.
+
+------------------------------------------------------------------------
+r89 | sam | 2003-09-04 15:29:16 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/unix/error.c
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/lock.c
+   M /trunk/lib/unix/misc.c
+   M /trunk/lib/unix/passwd.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/signal.c
+   M /trunk/lib/unix/system.c
+   M /trunk/lib/unix/temp.c
+   M /trunk/lib/unix/time.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/unix/wait.c
+
+  * Fucking K&R syntax!
+
+------------------------------------------------------------------------
+r88 | sam | 2003-09-04 14:46:44 +0200 (Thu, 04 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/examples/Makefile.am
+   A /trunk/examples/motif (from /trunk/examples/xm:84)
+   M /trunk/examples/motif/drawing-area.scm
+   M /trunk/examples/motif/list.scm
+   M /trunk/examples/motif/main-window.scm
+   M /trunk/examples/motif/message-dialog.scm
+   M /trunk/examples/motif/option-menu.scm
+   M /trunk/examples/motif/popup-menu.scm
+   M /trunk/examples/motif/pulldown-menu.scm
+   M /trunk/examples/motif/radio.scm
+   M /trunk/examples/motif/scroll-bar.scm
+   M /trunk/examples/motif/selection-box.scm
+   M /trunk/examples/motif/vcr.scm
+   M /trunk/examples/xaw/accel.scm
+   M /trunk/examples/xaw/clickcount.scm
+   M /trunk/examples/xaw/dialog.scm
+   M /trunk/examples/xaw/grip.scm
+   M /trunk/examples/xaw/list.scm
+   M /trunk/examples/xaw/paned.scm
+   M /trunk/examples/xaw/panner.scm
+   M /trunk/examples/xaw/popup.scm
+   M /trunk/examples/xaw/porthole.scm
+   M /trunk/examples/xaw/pulldown.scm
+   M /trunk/examples/xaw/scrollbar.scm
+   M /trunk/examples/xaw/scrollbox.scm
+   M /trunk/examples/xaw/stripchart.scm
+   M /trunk/examples/xaw/text.scm
+   M /trunk/examples/xaw/tree.scm
+   M /trunk/examples/xaw/viewport.scm
+   D /trunk/examples/xm
+
+  * Renamed examples/xm into examples/motif.
+  * Fixed example files so that they fit with the new xaw.scm and motif.scm.
+
+------------------------------------------------------------------------
+r87 | sam | 2003-09-04 14:45:48 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/motif.scm
+   M /trunk/scm/xaw.scm
+   M /trunk/scm/xlib.scm
+   M /trunk/scm/xwidgets.scm
+
+  * Beautified xaw and motif Scheme files.
+
+------------------------------------------------------------------------
+r86 | sam | 2003-09-04 14:45:17 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   D /trunk/src/build
+
+  * Removed unused obsolete build file.
+
+------------------------------------------------------------------------
+r85 | sam | 2003-09-04 14:44:54 +0200 (Thu, 04 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   A /trunk/lib/xwidgets/motif/init.c
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+   A /trunk/lib/xwidgets/xaw/init.c
+
+  * Renamed xaw-common.so to xaw-xt.so and motif-common.so to motif-xt.so.
+  * Added init.c to xaw-xt.so and motif-xt.so for proper initialisation.
+
+------------------------------------------------------------------------
+r84 | sam | 2003-09-04 13:26:55 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/xlib/xinit.c
+   M /trunk/lib/xwidgets/xtinit.c
+
+  * Provide foo.so, not foo.o.
+
+------------------------------------------------------------------------
+r83 | sam | 2003-09-04 13:26:39 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/mkwidget.scm
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * Cosmetic fixes.
+
+------------------------------------------------------------------------
+r82 | sam | 2003-09-04 12:40:16 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/Makefile.am
+   D /trunk/scm/xt.scm
+   A /trunk/scm/xwidgets.scm (from /trunk/scm/xt.scm:81)
+
+  * Renamed xt.scm to xwidgets.scm.
+
+------------------------------------------------------------------------
+r81 | sam | 2003-09-04 12:39:47 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/Makefile.am
+   A /trunk/scm/xaw.scm (from /trunk/scm/xwidgets.scm:72)
+   M /trunk/scm/xt.scm
+   D /trunk/scm/xwidgets.scm
+
+  * Renamed xwidgets.scm to xaw.scm.
+
+------------------------------------------------------------------------
+r80 | sam | 2003-09-04 11:28:57 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xwidgets/motif/Makefile.am
+
+  * Forgot a small xm/motif fix.
+
+------------------------------------------------------------------------
+r79 | sam | 2003-09-04 11:23:22 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/xlib/client.c
+   M /trunk/lib/xlib/color.c
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/mkwidget.scm
+   A /trunk/lib/xwidgets/motif (from /trunk/lib/xwidgets/xm:78)
+   D /trunk/lib/xwidgets/xm
+
+  * Re-renamed xm to motif (SVN rules).
+
+------------------------------------------------------------------------
+r78 | sam | 2003-09-04 00:59:20 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/mkwidget.scm
+   D /trunk/lib/xwidgets/motif
+   A /trunk/lib/xwidgets/xm (from /trunk/lib/xwidgets/motif:77)
+   M /trunk/lib/xwidgets/xm/Makefile.am
+
+  * Changed motif back to xm.
+
+------------------------------------------------------------------------
+r77 | sam | 2003-09-04 00:56:02 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   D /trunk/lib/xwidgets/Include.am
+   M /trunk/lib/xwidgets/Makefile.am
+   M /trunk/lib/xwidgets/mkwidget.scm
+   M /trunk/lib/xwidgets/motif/Makefile.am
+   M /trunk/lib/xwidgets/xaw/Makefile.am
+
+  * Rebuild everything properly.
+
+------------------------------------------------------------------------
+r76 | sam | 2003-09-04 00:00:01 +0200 (Thu, 04 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/Makefile.am
+   D /trunk/lib/xaw
+   D /trunk/lib/xm
+   D /trunk/lib/xt
+   A /trunk/lib/xwidgets (from /trunk/lib/xt:75)
+   M /trunk/lib/xwidgets/Makefile.am
+   A /trunk/lib/xwidgets/motif (from /trunk/lib/xm:75)
+   A /trunk/lib/xwidgets/xaw (from /trunk/lib/xaw:75)
+
+  * Moved some directories.
+
+------------------------------------------------------------------------
+r75 | sam | 2003-09-03 02:51:27 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+   M /trunk/debian/rules
+
+  * Fixed packaging.
+
+------------------------------------------------------------------------
+r74 | sam | 2003-09-03 02:05:48 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * Removed useless line in configure.ac.
+
+------------------------------------------------------------------------
+r73 | sam | 2003-09-03 02:01:26 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   D /trunk/util
+
+  * Scrapped util.
+
+------------------------------------------------------------------------
+r72 | sam | 2003-09-03 01:53:31 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   D /trunk/lib/xaw/clock.d
+
+  * Removed obsolete file.
+
+------------------------------------------------------------------------
+r71 | sam | 2003-09-03 01:53:22 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   M /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/man/Makefile.am
+   M /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix/Makefile.am
+   M /trunk/doc/usenix/Makefile.am
+   M /trunk/doc/util/Makefile.am
+   M /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt/Makefile.am
+   M /trunk/src/Makefile.am
+
+  * Fixed make dist.
+
+------------------------------------------------------------------------
+r70 | sam | 2003-09-03 01:37:49 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/xwidgets.scm
+
+  * Fixed xwidgets.scm to work with xm.so.
+
+------------------------------------------------------------------------
+r69 | sam | 2003-09-03 01:23:17 +0200 (Wed, 03 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/c++/class.cpp
+   M /trunk/examples/c++/constructor.cpp
+
+  * Updated examples (compilation flags, coding style)
+
+------------------------------------------------------------------------
+r68 | sam | 2003-09-02 11:54:47 +0200 (Tue, 02 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/util/alloca.c
+
+  * Fuck K&R !
+
+------------------------------------------------------------------------
+r67 | sam | 2003-09-02 11:51:35 +0200 (Tue, 02 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/unix/error.c
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/lock.c
+   M /trunk/lib/unix/misc.c
+   M /trunk/lib/unix/passwd.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/signal.c
+   M /trunk/lib/unix/system.c
+   M /trunk/lib/unix/temp.c
+   M /trunk/lib/unix/time.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/unix/wait.c
+   M /trunk/lib/xaw/ascii.d
+   M /trunk/lib/xaw/box.d
+   M /trunk/lib/xaw/clock.d
+   M /trunk/lib/xaw/command.d
+   M /trunk/lib/xaw/dialog.d
+   M /trunk/lib/xaw/form.d
+   M /trunk/lib/xaw/grip.d
+   M /trunk/lib/xaw/label.d
+   M /trunk/lib/xaw/list.d
+   M /trunk/lib/xaw/menubutton.d
+   M /trunk/lib/xaw/paned.d
+   M /trunk/lib/xaw/panner.d
+   M /trunk/lib/xaw/porthole.d
+   M /trunk/lib/xaw/repeater.d
+   M /trunk/lib/xaw/scrollbar.d
+   M /trunk/lib/xaw/shell.d
+   M /trunk/lib/xaw/simplemenu.d
+   M /trunk/lib/xaw/sme.d
+   M /trunk/lib/xaw/smebsb.d
+   M /trunk/lib/xaw/smeline.d
+   M /trunk/lib/xaw/stripchart.d
+   M /trunk/lib/xaw/toggle.d
+   M /trunk/lib/xaw/tree.d
+   M /trunk/lib/xaw/viewport.d
+   M /trunk/lib/xlib/client.c
+   M /trunk/lib/xlib/color.c
+   M /trunk/lib/xlib/colormap.c
+   M /trunk/lib/xlib/cursor.c
+   M /trunk/lib/xlib/display.c
+   M /trunk/lib/xlib/event.c
+   M /trunk/lib/xlib/extension.c
+   M /trunk/lib/xlib/font.c
+   M /trunk/lib/xlib/gcontext.c
+   M /trunk/lib/xlib/grab.c
+   M /trunk/lib/xlib/graphics.c
+   M /trunk/lib/xlib/key.c
+   M /trunk/lib/xlib/pixel.c
+   M /trunk/lib/xlib/pixmap.c
+   M /trunk/lib/xlib/property.c
+   M /trunk/lib/xlib/text.c
+   M /trunk/lib/xlib/type.c
+   M /trunk/lib/xlib/util.c
+   M /trunk/lib/xlib/window.c
+   M /trunk/lib/xlib/wm.c
+   M /trunk/lib/xlib/xerror.c
+   M /trunk/lib/xlib/xinit.c
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/lib/xlib/xobjects.c
+   M /trunk/lib/xm/arrow-button.d
+   M /trunk/lib/xm/bulletin-brd.d
+   M /trunk/lib/xm/cascade-btn.d
+   M /trunk/lib/xm/command.d
+   M /trunk/lib/xm/drawing-area.d
+   M /trunk/lib/xm/drawn-button.d
+   M /trunk/lib/xm/file-selectn.d
+   M /trunk/lib/xm/form.d
+   M /trunk/lib/xm/frame.d
+   M /trunk/lib/xm/label.d
+   M /trunk/lib/xm/list.d
+   M /trunk/lib/xm/main-window.d
+   M /trunk/lib/xm/message-box.d
+   M /trunk/lib/xm/paned-window.d
+   M /trunk/lib/xm/push-button.d
+   M /trunk/lib/xm/row-column.d
+   M /trunk/lib/xm/scale.d
+   M /trunk/lib/xm/scroll-bar.d
+   M /trunk/lib/xm/scrolled-win.d
+   M /trunk/lib/xm/selectn-box.d
+   M /trunk/lib/xm/separator.d
+   M /trunk/lib/xm/shell.d
+   M /trunk/lib/xm/support.d
+   M /trunk/lib/xm/text.d
+   M /trunk/lib/xm/toggle-btn.d
+   M /trunk/lib/xt/accelerator.c
+   M /trunk/lib/xt/action.c
+   M /trunk/lib/xt/callback.c
+   M /trunk/lib/xt/class.c
+   M /trunk/lib/xt/classname.c
+   M /trunk/lib/xt/context.c
+   M /trunk/lib/xt/converter.c
+   M /trunk/lib/xt/function.c
+   M /trunk/lib/xt/identifier.c
+   M /trunk/lib/xt/popup.c
+   M /trunk/lib/xt/resource.c
+   M /trunk/lib/xt/translation.c
+   M /trunk/lib/xt/widget.c
+   M /trunk/lib/xt/xt.h
+   M /trunk/lib/xt/xterror.c
+   M /trunk/lib/xt/xtinit.c
+   M /trunk/lib/xt/xtobjects.c
+
+  * Added proper license information in all files and set the $Id property.
+
+------------------------------------------------------------------------
+r66 | sam | 2003-09-02 10:12:11 +0200 (Tue, 02 Sep 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/util/mkindex.c
+   M /trunk/examples/c++/class.cpp
+   M /trunk/include/cstring.h
+   M /trunk/include/exception.h
+   M /trunk/include/gc.h
+   M /trunk/include/misc.h
+   M /trunk/include/object.h
+   M /trunk/include/stkmem.h
+   M /trunk/include/type.h
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/elk-eval.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/monitor.c
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+   M /trunk/lib/unix/error.c
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/lock.c
+   M /trunk/lib/unix/misc.c
+   M /trunk/lib/unix/passwd.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/signal.c
+   M /trunk/lib/unix/system.c
+   M /trunk/lib/unix/temp.c
+   M /trunk/lib/unix/time.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/unix/wait.c
+   M /trunk/lib/xlib/client.c
+   M /trunk/lib/xlib/color.c
+   M /trunk/lib/xlib/colormap.c
+   M /trunk/lib/xlib/cursor.c
+   M /trunk/lib/xlib/display.c
+   M /trunk/lib/xlib/event.c
+   M /trunk/lib/xlib/extension.c
+   M /trunk/lib/xlib/font.c
+   M /trunk/lib/xlib/gcontext.c
+   M /trunk/lib/xlib/grab.c
+   M /trunk/lib/xlib/graphics.c
+   M /trunk/lib/xlib/key.c
+   M /trunk/lib/xlib/pixel.c
+   M /trunk/lib/xlib/pixmap.c
+   M /trunk/lib/xlib/property.c
+   M /trunk/lib/xlib/text.c
+   M /trunk/lib/xlib/type.c
+   M /trunk/lib/xlib/util.c
+   M /trunk/lib/xlib/window.c
+   M /trunk/lib/xlib/wm.c
+   M /trunk/lib/xlib/xerror.c
+   M /trunk/lib/xlib/xinit.c
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/lib/xlib/xobjects.c
+   M /trunk/lib/xt/accelerator.c
+   M /trunk/lib/xt/action.c
+   M /trunk/lib/xt/callback.c
+   M /trunk/lib/xt/class.c
+   M /trunk/lib/xt/classname.c
+   M /trunk/lib/xt/context.c
+   M /trunk/lib/xt/converter.c
+   M /trunk/lib/xt/function.c
+   M /trunk/lib/xt/identifier.c
+   M /trunk/lib/xt/popup.c
+   M /trunk/lib/xt/resource.c
+   M /trunk/lib/xt/translation.c
+   M /trunk/lib/xt/widget.c
+   M /trunk/lib/xt/xt.h
+   M /trunk/lib/xt/xterror.c
+   M /trunk/lib/xt/xtinit.c
+   M /trunk/lib/xt/xtobjects.c
+   M /trunk/src/autoload.c
+   M /trunk/src/bignum.c
+   M /trunk/src/bool.c
+   M /trunk/src/char.c
+   M /trunk/src/cont.c
+   M /trunk/src/cstring.c
+   M /trunk/src/debug.c
+   M /trunk/src/dump-ecoff.c
+   M /trunk/src/dump-elf.c
+   M /trunk/src/dump-hp9k.c
+   M /trunk/src/dump-vanilla.c
+   M /trunk/src/dump.c
+   M /trunk/src/env.c
+   M /trunk/src/error.c
+   M /trunk/src/exception.c
+   M /trunk/src/feature.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/heap-sc.c
+   M /trunk/src/heap.c
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/list.c
+   M /trunk/src/load-dl.c
+   M /trunk/src/load-ld.c
+   M /trunk/src/load-rld.c
+   M /trunk/src/load-shl.c
+   M /trunk/src/load.c
+   M /trunk/src/malloc.c
+   M /trunk/src/math.c
+   M /trunk/src/onfork.c
+   M /trunk/src/prim.c
+   M /trunk/src/print.c
+   M /trunk/src/proc.c
+   M /trunk/src/promise.c
+   M /trunk/src/read.c
+   M /trunk/src/special.c
+   M /trunk/src/stab-bsd.c
+   M /trunk/src/stab-coff.c
+   M /trunk/src/stab-convex.c
+   M /trunk/src/stab-ecoff.c
+   M /trunk/src/stab-elf.c
+   M /trunk/src/stab-hp9k300.c
+   M /trunk/src/stab-hp9k800.c
+   M /trunk/src/stab-macho.c
+   M /trunk/src/stab.c
+   M /trunk/src/stkmem.c
+   M /trunk/src/string.c
+   M /trunk/src/symbol.c
+   M /trunk/src/terminate.c
+   M /trunk/src/type.c
+   M /trunk/src/vector.c
+
+  * No TABS !!
+
+------------------------------------------------------------------------
+r65 | sam | 2003-09-01 19:06:43 +0200 (Mon, 01 Sep 2003) | 3 lines
+Changed paths:
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/debug.c
+   M /trunk/lib/misc/elk-eval.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/monitor.c
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+
+  * Added $Id and copyright information to all .c files in lib/misc/
+  * Fixed old shitty K&R syntax.
+
+------------------------------------------------------------------------
+r64 | sam | 2003-08-30 18:47:54 +0200 (Sat, 30 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/include/compat.h
+   M /trunk/include/cstring.h
+   M /trunk/include/exception.h
+   M /trunk/include/extern.h
+   M /trunk/include/funcproto.h
+   M /trunk/include/gc.h
+   M /trunk/include/intern.h
+   M /trunk/include/kernel.h
+   M /trunk/include/misc.h
+   M /trunk/include/object.h
+   M /trunk/include/param.h
+   M /trunk/include/scheme.h
+   M /trunk/include/stkmem.h
+   M /trunk/include/type.h
+   M /trunk/src/autoload.c
+   M /trunk/src/bignum.c
+   M /trunk/src/bool.c
+   M /trunk/src/char.c
+   M /trunk/src/cont.c
+   M /trunk/src/cstring.c
+   M /trunk/src/debug.c
+   M /trunk/src/dump-ecoff.c
+   M /trunk/src/dump-elf.c
+   M /trunk/src/dump-hp9k.c
+   M /trunk/src/dump-vanilla.c
+   M /trunk/src/dump.c
+   M /trunk/src/env.c
+   M /trunk/src/error.c
+   M /trunk/src/exception.c
+   M /trunk/src/feature.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/heap-sc.c
+   M /trunk/src/heap.c
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/list.c
+   M /trunk/src/load-dl.c
+   M /trunk/src/load-ld.c
+   M /trunk/src/load-rld.c
+   M /trunk/src/load-shl.c
+   M /trunk/src/load.c
+   M /trunk/src/main.c
+   M /trunk/src/malloc.c
+   M /trunk/src/math.c
+   M /trunk/src/onfork.c
+   M /trunk/src/prim.c
+   M /trunk/src/print.c
+   M /trunk/src/proc.c
+   M /trunk/src/promise.c
+   M /trunk/src/read.c
+   M /trunk/src/special.c
+   M /trunk/src/stab-bsd.c
+   M /trunk/src/stab-coff.c
+   M /trunk/src/stab-convex.c
+   M /trunk/src/stab-ecoff.c
+   M /trunk/src/stab-elf.c
+   M /trunk/src/stab-hp9k300.c
+   M /trunk/src/stab-hp9k800.c
+   M /trunk/src/stab-macho.c
+   M /trunk/src/stab.c
+   M /trunk/src/stkmem.c
+   M /trunk/src/string.c
+   M /trunk/src/symbol.c
+   M /trunk/src/terminate.c
+   M /trunk/src/type.c
+   M /trunk/src/vector.c
+
+  * Added $Id and copyright information to all .c and .h files in the kernel.
+
+------------------------------------------------------------------------
+r63 | sam | 2003-08-30 18:16:52 +0200 (Sat, 30 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/AUTHORS
+   M /trunk/BUGS
+   M /trunk/INSTALL
+   M /trunk/MACHINES
+   M /trunk/MIGRATE
+   M /trunk/README
+   M /trunk/TODO
+   M /trunk/configure.ac
+
+  * Fixed the $Id stuff.
+
+------------------------------------------------------------------------
+r62 | sam | 2003-08-30 18:16:40 +0200 (Sat, 30 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/NEWS
+
+  * Redid the layout of the NEWS file.
+
+------------------------------------------------------------------------
+r61 | sam | 2003-08-30 18:07:52 +0200 (Sat, 30 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk/AUTHORS
+   M /trunk/BUGS
+   M /trunk/INSTALL
+   M /trunk/MACHINES
+   M /trunk/MIGRATE
+   M /trunk/NEWS
+   M /trunk/README
+   D /trunk/ROADMAP
+   M /trunk/TODO
+
+  * Added $Id tags to the root documentation files.
+  * Merged ROADMAP into README.
+  * Prepared 4.0 here and there.
+
+------------------------------------------------------------------------
+r60 | sam | 2003-08-28 11:40:34 +0200 (Thu, 28 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xaw/Makefile.am
+   M /trunk/lib/xlib/Makefile.am
+   M /trunk/lib/xm/Makefile.am
+   M /trunk/lib/xt/Makefile.am
+
+  * Use XAW_LIBS etc. to build plugins.
+
+------------------------------------------------------------------------
+r59 | sam | 2003-08-28 11:39:36 +0200 (Thu, 28 Aug 2003) | 6 lines
+Changed paths:
+   M /trunk/debian/Makefile.am
+   A /trunk/debian/elkdoc.dirs
+   M /trunk/debian/rules
+
+  * debian/Makefile.am:
+    + Distribute more debian/* files.
+  * debian/rules:
+    + No longer use dh_installexamples, since the package does it for us.
+    + Ditto for dh_installman.
+
+------------------------------------------------------------------------
+r58 | sam | 2003-08-28 11:38:08 +0200 (Thu, 28 Aug 2003) | 2 lines
+Changed paths:
+   D /trunk/lib/xaw/Makefile
+
+  * Removed a legacy Makefile.
+
+------------------------------------------------------------------------
+r57 | sam | 2003-08-27 10:27:15 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+
+  * Recurse into doc/ and examples/ during the build.
+
+------------------------------------------------------------------------
+r56 | sam | 2003-08-27 03:17:40 +0200 (Wed, 27 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk/configure.ac
+
+  * configure.ac:
+    + Generate the doc/* Makefiles.
+    + Export XAW_LIBS and so on to the Makefiles.
+
+------------------------------------------------------------------------
+r55 | sam | 2003-08-27 03:15:32 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/doc/Makefile.am
+   M /trunk/doc/bitstring
+   D /trunk/doc/bitstring/Makefile
+   A /trunk/doc/bitstring/Makefile.am
+   M /trunk/doc/cprog
+   D /trunk/doc/cprog/Makefile
+   A /trunk/doc/cprog/Makefile.am
+   M /trunk/doc/kernel
+   D /trunk/doc/kernel/Makefile
+   A /trunk/doc/kernel/Makefile.am
+   M /trunk/doc/man
+   D /trunk/doc/man/Makefile
+   A /trunk/doc/man/Makefile.am
+   D /trunk/doc/man/scheme.1
+   M /trunk/doc/oops
+   D /trunk/doc/oops/Makefile
+   A /trunk/doc/oops/Makefile.am
+   M /trunk/doc/record
+   D /trunk/doc/record/Makefile
+   A /trunk/doc/record/Makefile.am
+   M /trunk/doc/regexp
+   D /trunk/doc/regexp/Makefile
+   A /trunk/doc/regexp/Makefile.am
+   M /trunk/doc/unix
+   D /trunk/doc/unix/Makefile
+   A /trunk/doc/unix/Makefile.am
+   M /trunk/doc/usenix
+   D /trunk/doc/usenix/Makefile
+   A /trunk/doc/usenix/Makefile.am
+   M /trunk/doc/util
+   D /trunk/doc/util/Makefile
+   A /trunk/doc/util/Makefile.am
+   M /trunk/doc/xlib
+   D /trunk/doc/xlib/Makefile
+   A /trunk/doc/xlib/Makefile.am
+   M /trunk/doc/xt
+   D /trunk/doc/xt/Makefile
+   A /trunk/doc/xt/Makefile.am
+
+  * Beginning of the autoconfiscation of the documentation.
+
+------------------------------------------------------------------------
+r54 | sam | 2003-08-27 03:13:53 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/scm/Makefile.am
+
+  * Do not forget to distribute our .scm files with the tarball.
+
+------------------------------------------------------------------------
+r53 | sam | 2003-08-27 03:13:02 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/Makefile.am
+
+  * Added the example files to both the distribution and the installed doc.
+
+------------------------------------------------------------------------
+r52 | sam | 2003-08-27 03:11:36 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/c++/class.cpp
+   M /trunk/examples/c++/constructor.cpp
+
+  * Fixed build instructions for the C++ examples.
+
+------------------------------------------------------------------------
+r51 | sam | 2003-08-27 01:45:30 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xm/Makefile.am
+   M /trunk/lib/xt/Makefile.am
+
+  * Removed subdirs-objects, it was causing `make distclean' to fail.
+
+------------------------------------------------------------------------
+r50 | sam | 2003-08-27 01:30:22 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xt/Include.am
+   D /trunk/lib/xt/error.c
+   D /trunk/lib/xt/init.c
+   D /trunk/lib/xt/objects.c
+   A /trunk/lib/xt/xterror.c (from /trunk/lib/xt/error.c:48)
+   A /trunk/lib/xt/xtinit.c (from /trunk/lib/xt/init.c:48)
+   A /trunk/lib/xt/xtobjects.c (from /trunk/lib/xt/objects.c:48)
+
+  * Renamed files in xt/ that collided with files in xlib/.
+
+------------------------------------------------------------------------
+r49 | sam | 2003-08-27 01:29:14 +0200 (Wed, 27 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/xlib/Include.am
+   D /trunk/lib/xlib/error.c
+   D /trunk/lib/xlib/init.c
+   D /trunk/lib/xlib/objects.c
+   A /trunk/lib/xlib/xerror.c (from /trunk/lib/xlib/error.c:48)
+   A /trunk/lib/xlib/xinit.c (from /trunk/lib/xlib/init.c:48)
+   A /trunk/lib/xlib/xobjects.c (from /trunk/lib/xlib/objects.c:48)
+
+  * Renamed files in xlib/ that collided with files in xt/.
+
+------------------------------------------------------------------------
+r48 | sam | 2003-08-25 20:28:02 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/examples/xm/drawing-area.scm
+   M /trunk/lib/Makefile.am
+   M /trunk/lib/xaw
+   M /trunk/lib/xaw/Makefile
+   A /trunk/lib/xaw/Makefile.am
+   D /trunk/lib/xaw/build
+   M /trunk/lib/xlib
+   A /trunk/lib/xlib/Include.am
+   M /trunk/lib/xlib/Makefile.am
+   M /trunk/lib/xm
+   D /trunk/lib/xm/Makefile
+   A /trunk/lib/xm/Makefile.am
+   D /trunk/lib/xm/build
+   D /trunk/lib/xm/xt
+   M /trunk/lib/xt
+   A /trunk/lib/xt/Include.am
+   D /trunk/lib/xt/Makefile
+   A /trunk/lib/xt/Makefile.am
+   D /trunk/lib/xt/build
+   M /trunk/scm
+   M /trunk/scm/xt.scm
+   M /trunk/scm/xwidgets.scm
+
+  * Fixed the build process for all extensions.
+
+------------------------------------------------------------------------
+r47 | sam | 2003-08-25 20:14:21 +0200 (Mon, 25 Aug 2003) | 3 lines
+Changed paths:
+   M /trunk/scm/slib.scm.in
+   M /trunk/scm/xlib.scm
+   M /trunk/scm/xt.scm
+   M /trunk/scm/xwidgets.scm
+
+  * scm/slib.scm.in: version information is set a build time.
+  * scm/*.scm: don't choke on -lib- variables that aren't needed.
+
+------------------------------------------------------------------------
+r46 | sam | 2003-08-25 19:09:12 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   D /trunk/debian/elk.ini
+   M /trunk/debian/rules
+   M /trunk/scm/Makefile.am
+   A /trunk/scm/slib.scm.in
+
+  * Moved debian/elk.ini to scm/slib.scm.in, generated by ./configure.
+
+------------------------------------------------------------------------
+r45 | sam | 2003-08-25 18:29:54 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   M /trunk/configure.ac
+   M /trunk/lib/Makefile.am
+   M /trunk/lib/xlib
+   D /trunk/lib/xlib/Makefile
+   A /trunk/lib/xlib/Makefile.am
+   D /trunk/lib/xlib/build
+
+  * The Xlib plugin properly builds.
+
+------------------------------------------------------------------------
+r44 | sam | 2003-08-25 18:20:44 +0200 (Mon, 25 Aug 2003) | 7 lines
+Changed paths:
+   M /trunk/debian/control
+   D /trunk/debian/dirs
+   M /trunk/debian/menu
+
+  * debian/control:
+    + Set policy to 3.6.1.0.
+  * debian/dirs:
+    + Removed that file.
+  * debian/menu:
+    + Changed `scheme-elk' to `elk'.
+
+------------------------------------------------------------------------
+r43 | sam | 2003-08-25 18:00:50 +0200 (Mon, 25 Aug 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/Makefile.am
+   M /trunk/lib/unix
+   D /trunk/lib/unix/Makefile
+   A /trunk/lib/unix/Makefile.am
+   D /trunk/lib/unix/build
+
+  * Distribute headers in /usr/include/elk.
+  * Build the Unix plugin.
+
+------------------------------------------------------------------------
+r42 | sam | 2003-08-25 17:59:18 +0200 (Mon, 25 Aug 2003) | 6 lines
+Changed paths:
+   M /trunk/lib/misc/Makefile.am
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/debug.c
+   M /trunk/lib/misc/elk-eval.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/monitor.c
+   D /trunk/lib/misc/newhandler.c
+   A /trunk/lib/misc/newhandler.cpp (from /trunk/lib/misc/newhandler.c:36)
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+
+  * Fixed warnings.
+  * Renamed newhandler.c into newhandler.cpp.
+  * Use the -module flag for plugins so that their name doesn't need to
+    start with "lib". This is partly because libtool fucks up when a module
+    is called "libgdbm.so" and there is also a lib with this name.
+
+------------------------------------------------------------------------
+r41 | sam | 2003-08-25 17:01:22 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/object.h
+   M /trunk/src/dump.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/load.c
+   M /trunk/src/math.c
+   M /trunk/src/print.c
+   M /trunk/src/stab.c
+
+  * Fixed all compilation warnings in the base code.
+
+------------------------------------------------------------------------
+r40 | sam | 2003-08-25 16:47:40 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/include/object.h
+
+  * Use ptrdiff_t for address arithmetics.
+
+------------------------------------------------------------------------
+r39 | sam | 2003-08-25 16:35:56 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/util/README
+   D /trunk/util/getversion
+
+  * Removed the useless util/getversion script.
+
+------------------------------------------------------------------------
+r38 | sam | 2003-08-25 16:35:03 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   D /trunk/PATCHLEVEL
+   M /trunk/ROADMAP
+   M /trunk/debian/elk.docs
+
+  * Removed the useless PATCHLEVEL file.
+
+------------------------------------------------------------------------
+r37 | sam | 2003-08-25 16:29:40 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/src/bignum.c
+
+  * src/bignum.c: Fixed some signed/unsigned comparisons.
+
+------------------------------------------------------------------------
+r36 | sam | 2003-08-25 16:17:09 +0200 (Mon, 25 Aug 2003) | 3 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include/intern.h
+   M /trunk/include/stkmem.h
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/system.c
+   M /trunk/lib/unix/temp.c
+   M /trunk/lib/unix/time.c
+   M /trunk/lib/unix/unix.h
+   M /trunk/lib/unix/wait.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/io.c
+   M /trunk/src/libelk.c
+   M /trunk/src/math.c
+   M /trunk/src/print.c
+
+  * Added comments from the old config/ directory to configure.ac, and started
+    changing all the AC_DEFINEs into proper autoconf checks.
+
+------------------------------------------------------------------------
+r35 | sam | 2003-08-25 15:03:52 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   D /trunk/examples/c++/class.c
+   A /trunk/examples/c++/class.cpp (from /trunk/examples/c++/class.c:34)
+   D /trunk/examples/c++/constructor.c
+   A /trunk/examples/c++/constructor.cpp (from /trunk/examples/c++/constructor.c:34)
+
+  * Renamed *.c into *.cpp because this is C++.
+
+------------------------------------------------------------------------
+r34 | sam | 2003-08-25 15:02:45 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   D /trunk/examples/CC
+   A /trunk/examples/c++ (from /trunk/examples/CC:30)
+
+  * Renamed CC into c++.
+
+------------------------------------------------------------------------
+r33 | sam | 2003-08-25 15:01:52 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/regexp/match.scm
+
+  * siteinfo.scm is now deprecated.
+
+------------------------------------------------------------------------
+r32 | sam | 2003-08-25 15:00:27 +0200 (Mon, 25 Aug 2003) | 3 lines
+Changed paths:
+   M /trunk/Makefile.am
+   D /trunk/debian/ldflags-elk.1
+   D /trunk/debian/linkscheme.1
+   D /trunk/debian/makedl.1
+   D /trunk/debian/manpages
+   M /trunk/debian/rules
+   D /trunk/debian/scheme-elk.1
+   D /trunk/scripts
+
+  * Removed all references to the utilities in script/ because we will be
+    using libelk instead.
+
+------------------------------------------------------------------------
+r31 | sam | 2003-08-25 14:50:11 +0200 (Mon, 25 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk/scm
+   M /trunk/scm/Makefile.am
+   D /trunk/scm/build
+   D /trunk/scm/build-siteinfo
+   M /trunk/scm/xlib.scm
+   M /trunk/scm/xt.scm
+
+  * scm/Makefile.am:
+    + Deprecated siteinfo.scm.
+    + Distribute .scm files in /usr/share/elk.
+
+------------------------------------------------------------------------
+r30 | sam | 2003-08-25 14:41:09 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/Makefile.am
+   D /trunk/config
+
+  * Removed the config/ directory; autoconf ought to do everything for us.
+
+------------------------------------------------------------------------
+r29 | sam | 2003-08-25 14:38:36 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/include
+   M /trunk/include/Makefile.am
+   D /trunk/include/build
+   D /trunk/include/build-config
+
+  * Moved the configuration macros from include/build-config to configure.ac.
+
+------------------------------------------------------------------------
+r28 | sam | 2003-08-25 14:20:01 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/debian/changelog
+   M /trunk/debian/dirs
+   M /trunk/debian/elkdoc.docs
+   M /trunk/debian/rules
+   M /trunk/lib/xaw/build
+   M /trunk/lib/xm/build
+
+  * Fixed the Debian package build. It now uses ./configure.
+
+------------------------------------------------------------------------
+r27 | sam | 2003-08-25 13:54:18 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+   M /trunk/lib/Makefile.am
+   M /trunk/lib/misc
+   D /trunk/lib/misc/Makefile
+   A /trunk/lib/misc/Makefile.am
+   D /trunk/lib/misc/build
+   M /trunk/src/Makefile.am
+
+  * Plugins in misc/ now get compiled.
+
+------------------------------------------------------------------------
+r26 | sam | 2003-08-25 13:19:28 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/rules
+   M /trunk/src/build
+
+  * Removed the arch-config kludge. Will re-enable it later if necessary.
+
+------------------------------------------------------------------------
+r25 | sam | 2003-08-25 13:15:39 +0200 (Mon, 25 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk
+   A /trunk/ChangeLog
+   D /trunk/Makefile
+   A /trunk/Makefile.am
+   A /trunk/autotools
+   A /trunk/autotools/Makefile.am
+   A /trunk/bootstrap
+   M /trunk/config
+   A /trunk/config/Makefile.am
+   A /trunk/configure.ac
+   M /trunk/debian
+   A /trunk/debian/Makefile.am
+   M /trunk/doc
+   A /trunk/doc/Makefile.am
+   M /trunk/examples
+   A /trunk/examples/Makefile.am
+   D /trunk/include/Makefile
+   A /trunk/include/Makefile.am
+   M /trunk/lib
+   A /trunk/lib/Makefile.am
+   M /trunk/scm
+   D /trunk/scm/Makefile
+   A /trunk/scm/Makefile.am
+   M /trunk/scripts
+   D /trunk/scripts/Makefile
+   A /trunk/scripts/Makefile.am
+   M /trunk/src
+   D /trunk/src/Makefile
+   A /trunk/src/Makefile.am
+   M /trunk/src/main.c
+   M /trunk/util
+   A /trunk/util/Makefile.am
+
+  * First autoconfiscation step.
+    + libelk compiles.
+    + elk compiles.
+
+------------------------------------------------------------------------
+r24 | sam | 2003-08-25 12:42:53 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   A /trunk/COPYING (from /trunk/COPYRIGHT:15)
+   D /trunk/COPYRIGHT
+
+  * Renamed COPYRIGHT to COPYING.
+
+------------------------------------------------------------------------
+r23 | sam | 2003-08-25 12:41:05 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   A /trunk/AUTHORS (from /trunk/CONTRIBUTORS:15)
+   D /trunk/CONTRIBUTORS
+
+  * Renamed CONTRIBUTORS to AUTHORS.
+
+------------------------------------------------------------------------
+r22 | sam | 2003-08-25 12:40:24 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   D /trunk/CHANGES
+   A /trunk/NEWS (from /trunk/CHANGES:15)
+
+  * Renamed CHANGES to NEWS.
+
+------------------------------------------------------------------------
+r21 | sam | 2003-08-25 12:35:09 +0200 (Mon, 25 Aug 2003) | 2 lines
+Changed paths:
+   D /trunk/debian/elk.postinst
+   M /trunk/debian/elk.prerm
+   M /trunk/debian/manpages
+   M /trunk/debian/rules
+   D /trunk/debian/scheme-warning-elk
+   D /trunk/debian/scheme-warning-elk.1
+
+  * Got rid of the useless scheme-warning-elk.
+
+------------------------------------------------------------------------
+r20 | sam | 2003-08-21 14:43:01 +0200 (Thu, 21 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/control
+
+  * debian/control: Added proper conflict/replace rules.
+
+------------------------------------------------------------------------
+r19 | sam | 2003-08-21 14:40:09 +0200 (Thu, 21 Aug 2003) | 9 lines
+Changed paths:
+   M /trunk/debian
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+   A /trunk/debian/libelk0-dev.dirs
+   A /trunk/debian/libelk0.dirs
+   M /trunk/debian/rules
+   M /trunk/lib/xaw/build
+   M /trunk/lib/xm/build
+   M /trunk/src
+   M /trunk/src/build
+
+  * src/build:
+    + Build libelk as shared and static libraries.
+    + Dynamically link scheme with -lelk
+  * debian/control:
+    + New libelk0 and libelk0-dev packages.
+  * debian/rules:
+    + Changed build rules according to the new libelk.
+    + Remove .svn directories from the examples in the elkdoc package.
+
+------------------------------------------------------------------------
+r18 | sam | 2003-08-21 11:58:05 +0200 (Thu, 21 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk/src
+   M /trunk/src/build
+   A /trunk/src/libelk.c (from /trunk/src/main.c:17)
+   R /trunk/src/main.c
+
+  * Renamed main.c into libelk.c.
+  * Added a new main.c that uses libelk. Can be built this way:
+      gcc main.c -o scheme -L. -lelk
+
+------------------------------------------------------------------------
+r17 | sam | 2003-08-21 11:51:00 +0200 (Thu, 21 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/src/main.c
+
+  * Added a special case in Elk_Init for the forthcoming libelk.
+
+------------------------------------------------------------------------
+r16 | sam | 2003-08-21 00:19:53 +0200 (Thu, 21 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/debian
+   M /trunk/include
+   M /trunk/lib/misc
+   M /trunk/lib/unix
+   M /trunk/lib/xaw
+   M /trunk/lib/xlib
+   M /trunk/lib/xm
+   M /trunk/lib/xm/xt
+   M /trunk/lib/xt
+   M /trunk/scm
+   M /trunk/scripts
+   M /trunk/src
+
+  * Proper svn:ignore properties.
+
+------------------------------------------------------------------------
+r15 | sam | 2003-08-21 00:19:07 +0200 (Thu, 21 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/changelog
+
+  * Changelog for the 3.0-16 Debian upload.
+
+------------------------------------------------------------------------
+r14 | sam | 2003-08-21 00:18:34 +0200 (Thu, 21 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/examples/CC/class.c
+   M /trunk/examples/CC/constructor.c
+
+  * Ported the C++ examplesto the shared object dynamic linking scheme.
+
+------------------------------------------------------------------------
+r13 | sam | 2003-08-20 11:26:21 +0200 (Wed, 20 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/lib/misc/build
+   M /trunk/lib/unix/build
+   M /trunk/lib/xaw/build
+   M /trunk/lib/xlib/build
+   M /trunk/lib/xm/build
+   M /trunk/lib/xm/xt/build
+   M /trunk/lib/xt/build
+
+  * Link objects with gcc, not ld.
+
+------------------------------------------------------------------------
+r12 | sam | 2003-08-19 21:50:05 +0200 (Tue, 19 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/debian/rules
+
+  * debian/rules: should be executable.
+
+------------------------------------------------------------------------
+r11 | sam | 2003-08-19 21:38:03 +0200 (Tue, 19 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/src/build
+
+  * src/build: made the build continue if debian/arch-config is not found.
+
+------------------------------------------------------------------------
+r10 | sam | 2003-08-19 21:32:56 +0200 (Tue, 19 Aug 2003) | 2 lines
+Changed paths:
+   A /trunk/debian/compat
+   M /trunk/debian/control
+   M /trunk/debian/rules
+
+  * Use debian/compat instead of DH_COMPAT.
+
+------------------------------------------------------------------------
+r9 | sam | 2003-08-19 21:27:51 +0200 (Tue, 19 Aug 2003) | 6 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/rules
+   M /trunk/doc/man/elk.1
+   M /trunk/src/math.c
+
+elk (3.0-15) unstable; urgency=low
+  * In math.c:Exact_Modulo(), follow R5RS's definition of Modulo: if x/y is an
+    integer, return Zero (Closes: #197831).
+  * Made /usr/bin/elk a symlink to /usr/bin/scheme-elk.
+ -- Sam Hocevar (Debian packages) <sam+deb@zoy.org>  Wed, 18 Jun 2003 01:42:54 +0200
+
+------------------------------------------------------------------------
+r8 | sam | 2003-08-19 21:27:17 +0200 (Tue, 19 Aug 2003) | 5 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+
+elk (3.0-14) unstable; urgency=low
+  * Rebuilt package against libgdbm's new version.
+  * Set policy to 3.5.10.
+ -- Sam Hocevar (Debian packages) <sam+deb@zoy.org>  Wed,  4 Jun 2003 02:42:08 +0200
+
+------------------------------------------------------------------------
+r7 | sam | 2003-08-19 21:26:49 +0200 (Tue, 19 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk/debian/README.Debian
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+   M /trunk/include/extern.h
+   M /trunk/lib/xlib/objects.c
+   M /trunk/lib/xt/objects.c
+   M /trunk/src/error.c
+   M /trunk/src/print.c
+   M /trunk/src/terminate.c
+
+elk (3.0-13) unstable; urgency=low
+  * Fixed gcc-3.3 compilation errors due to deprecated usage of <varargs.h>.
+ -- Sam Hocevar (Debian packages) <sam+deb@zoy.org>  Fri, 30 May 2003 17:04:56 +0200
+
+------------------------------------------------------------------------
+r6 | sam | 2003-08-19 21:26:04 +0200 (Tue, 19 Aug 2003) | 4 lines
+Changed paths:
+   M /trunk/debian/changelog
+   M /trunk/src/build
+
+elk (3.0-12) unstable; urgency=low
+  * Fixed generation of /usr/lib/elk/module.a (needed to build sced).
+ -- Samuel Hocevar <sam@zoy.org>  Sat,  5 Apr 2003 01:45:26 +0200
+
+------------------------------------------------------------------------
+r5 | sam | 2003-08-19 21:25:35 +0200 (Tue, 19 Aug 2003) | 7 lines
+Changed paths:
+   M /trunk/config/system
+   M /trunk/debian/changelog
+   M /trunk/include/misc.h
+   M /trunk/include/object.h
+   M /trunk/src/env.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/heap.c
+
+elk (3.0-11) unstable; urgency=low
+  * Fixed a compilation issue in src/load-dl.c:Load_Lib().
+  * Fixed more pointer/integer type confusions, used ptrdiff_t where possible.
+  * Fixed a register mangling issue in heap.c:Visit_GC_List() and
+    heap.c:Visit_Wind() (Really fixes #59893).
+ -- Samuel Hocevar <sam@zoy.org>  Fri,  4 Apr 2003 02:48:29 +0200
+
+------------------------------------------------------------------------
+r4 | sam | 2003-08-19 21:25:03 +0200 (Tue, 19 Aug 2003) | 16 lines
+Changed paths:
+   M /trunk/MACHINES
+   M /trunk/config/system
+   M /trunk/debian/README.Debian
+   M /trunk/debian/changelog
+   M /trunk/debian/control
+   M /trunk/debian/elk.ini
+   M /trunk/debian/rules
+   M /trunk/debian/scheme-warning-elk
+   M /trunk/include/Makefile
+   M /trunk/include/build-config
+   M /trunk/include/object.h
+   M /trunk/lib/misc/Makefile
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/build
+   M /trunk/lib/misc/elk-eval.c
+   M /trunk/lib/misc/gdbm.c
+   M /trunk/lib/misc/hack.c
+   M /trunk/lib/misc/record.c
+   M /trunk/lib/misc/regexp.c
+   M /trunk/lib/misc/struct.c
+   M /trunk/lib/unix/Makefile
+   M /trunk/lib/unix/build
+   M /trunk/lib/unix/file.c
+   M /trunk/lib/unix/passwd.c
+   M /trunk/lib/unix/process.c
+   M /trunk/lib/unix/unix.c
+   M /trunk/lib/xaw/Makefile
+   M /trunk/lib/xaw/build
+   M /trunk/lib/xlib/Makefile
+   M /trunk/lib/xlib/build
+   M /trunk/lib/xlib/client.c
+   M /trunk/lib/xlib/color.c
+   M /trunk/lib/xlib/colormap.c
+   M /trunk/lib/xlib/display.c
+   M /trunk/lib/xlib/error.c
+   M /trunk/lib/xlib/event.c
+   M /trunk/lib/xlib/extension.c
+   M /trunk/lib/xlib/font.c
+   M /trunk/lib/xlib/gcontext.c
+   M /trunk/lib/xlib/grab.c
+   M /trunk/lib/xlib/graphics.c
+   M /trunk/lib/xlib/init.c
+   M /trunk/lib/xlib/key.c
+   M /trunk/lib/xlib/pixel.c
+   M /trunk/lib/xlib/property.c
+   M /trunk/lib/xlib/type.c
+   M /trunk/lib/xlib/window.c
+   M /trunk/lib/xlib/wm.c
+   M /trunk/lib/xm/Makefile
+   M /trunk/lib/xm/build
+   M /trunk/lib/xm/xt/Makefile
+   M /trunk/lib/xm/xt/build
+   M /trunk/lib/xt/Makefile
+   M /trunk/lib/xt/accelerator.c
+   M /trunk/lib/xt/action.c
+   M /trunk/lib/xt/build
+   M /trunk/lib/xt/callback.c
+   M /trunk/lib/xt/class.c
+   M /trunk/lib/xt/context.c
+   M /trunk/lib/xt/init.c
+   M /trunk/lib/xt/resource.c
+   M /trunk/lib/xt/translation.c
+   M /trunk/lib/xt/widget.c
+   M /trunk/scm/Makefile
+   M /trunk/scm/bitstring.scm
+   M /trunk/scm/build
+   M /trunk/scm/gdbmtest.scm
+   M /trunk/scm/oops.scm
+   M /trunk/scm/record.scm
+   M /trunk/scm/regexp.scm
+   M /trunk/scm/struct.scm
+   M /trunk/scm/unix.scm
+   M /trunk/scm/xlib.scm
+   M /trunk/scm/xt.scm
+   M /trunk/scm/xwidgets.scm
+   M /trunk/scripts/Makefile
+   M /trunk/src/Makefile
+   M /trunk/src/autoload.c
+   M /trunk/src/build
+   M /trunk/src/heap.c
+   M /trunk/src/load-dl.c
+   M /trunk/src/load-ld.c
+   M /trunk/src/load-rld.c
+   M /trunk/src/load-shl.c
+   M /trunk/src/load.c
+   M /trunk/src/main.c
+
+elk (3.0-10) unstable; urgency=low
+  * Updated debhelper build dependency to >>3.0.0.
+  * Shared library handling:
+    + Extended load.c:General_Load() to open shared libraries.
+    + Makefiles now build shared libraries.
+    + Stopped distributing .o files and replaced them with the .so shared
+      libraries; built the Unix, X11, Xaw and Motif extensions.
+    + The interpreter is no longer linked with -lgdbm, gdbm.so is instead.
+  * Replaced standalone.o and module.o with their .a equivalents.
+  * Made the 'debian/arch-config' sourcing errors non-fatal so that make
+    distclean works in the src/ directory.
+  * Changed SCM_DIR again, from /usr/share/elk/scm to /usr/share/elk, and
+    ditto with OBJ_DIR, from /usr/lib/elk/obj to /usr/lib/elk.
+  * Defaulted "garbage-collect-notify?" and "autoload-notify?" to #f.
+ -- Samuel Hocevar <sam@zoy.org>  Tue,  1 Apr 2003 23:34:26 +0200
+
+------------------------------------------------------------------------
+r3 | sam | 2003-08-19 21:24:23 +0200 (Tue, 19 Aug 2003) | 22 lines
+Changed paths:
+   M /trunk/BUGS
+   M /trunk/config/system
+   M /trunk/debian/README.Debian
+   M /trunk/debian/changelog
+   M /trunk/debian/elk.ini
+   M /trunk/debian/rules
+   M /trunk/include/build-config
+   M /trunk/include/cstring.h
+   M /trunk/include/extern.h
+   M /trunk/include/gc.h
+   M /trunk/include/intern.h
+   M /trunk/include/misc.h
+   M /trunk/include/object.h
+   M /trunk/include/type.h
+   M /trunk/lib/misc/bitstring.c
+   M /trunk/lib/misc/newhandler.c
+   M /trunk/lib/unix/fdescr.c
+   M /trunk/lib/xlib/xlib.h
+   M /trunk/scm/build
+   M /trunk/scm/initscheme.scm
+   M /trunk/src/autoload.c
+   M /trunk/src/bignum.c
+   M /trunk/src/bool.c
+   M /trunk/src/char.c
+   M /trunk/src/cont.c
+   M /trunk/src/cstring.c
+   M /trunk/src/debug.c
+   M /trunk/src/dump-ecoff.c
+   M /trunk/src/dump-elf.c
+   M /trunk/src/dump-hp9k.c
+   M /trunk/src/dump-vanilla.c
+   M /trunk/src/dump.c
+   M /trunk/src/env.c
+   M /trunk/src/error.c
+   M /trunk/src/exception.c
+   M /trunk/src/feature.c
+   M /trunk/src/heap-gen.c
+   M /trunk/src/heap-sc.c
+   M /trunk/src/heap.c
+   M /trunk/src/io.c
+   M /trunk/src/list.c
+   M /trunk/src/load-dl.c
+   M /trunk/src/load-ld.c
+   M /trunk/src/load-rld.c
+   M /trunk/src/load-shl.c
+   M /trunk/src/load.c
+   M /trunk/src/main.c
+   M /trunk/src/malloc.c
+   M /trunk/src/math.c
+   M /trunk/src/onfork.c
+   M /trunk/src/prim.c
+   M /trunk/src/print.c
+   M /trunk/src/proc.c
+   M /trunk/src/promise.c
+   M /trunk/src/read.c
+   M /trunk/src/special.c
+   M /trunk/src/stab-bsd.c
+   M /trunk/src/stab-coff.c
+   M /trunk/src/stab-convex.c
+   M /trunk/src/stab-ecoff.c
+   M /trunk/src/stab-elf.c
+   M /trunk/src/stab-hp9k300.c
+   M /trunk/src/stab-hp9k800.c
+   M /trunk/src/stab-macho.c
+   M /trunk/src/stab.c
+   M /trunk/src/stkmem.c
+   M /trunk/src/string.c
+   M /trunk/src/symbol.c
+   M /trunk/src/terminate.c
+   M /trunk/src/type.c
+   M /trunk/src/vector.c
+
+elk (3.0-9) unstable; urgency=low
+  * New maintainer.
+  * Packaging updates:
+    + Fixed spelling in the package description (Closes: #161056).
+    + Updated standards version to 3.5.9.0.
+    + Changed SCM_DIR from /usr/lib/elk/scm to /usr/share/elk/scm because
+      scheme scripts are platform-independent.
+  * Massive code cleanups:
+    + Added -Wall to the build rules to make error spotting easier, and fixed
+      all compilation warnings in the main program.
+    + Replaced sys_errlist with strerror, bcopy with memcpy, bzero with memset.
+    + Fixed many uninitialized variables.
+  * Fixed some pointer/integer type confusions which caused elk to crash
+    on alpha (Closes: #59893) and probably ia64.
+  * Fixed a read overflow in heap-gen.c:AllocPage() that was corrupting the
+    internal heap (Closes: #57621).
+  * Fixed a missing memory area initialization in heap-gen.c:ExpandHeap() that
+    was causing garbage collector crashes.
+  * Fixed an integer sign issue in main.c:Max_Stack (Closes: #176190).
+  * Made `quit' an alias for `exit' in toplevel.scm.
+ -- Samuel Hocevar <sam@zoy.org>  Tue,  1 Apr 2003 11:33:23 +0200
+
+------------------------------------------------------------------------
+r2 | sam | 2003-08-19 21:22:48 +0200 (Tue, 19 Aug 2003) | 2 lines
+Changed paths:
+   M /trunk/config/site
+   A /trunk/config/system
+   A /trunk/debian
+   A /trunk/debian/README.Debian
+   A /trunk/debian/changelog
+   A /trunk/debian/control
+   A /trunk/debian/copyright
+   A /trunk/debian/dirs
+   A /trunk/debian/elk.docs
+   A /trunk/debian/elk.ini
+   A /trunk/debian/elk.postinst
+   A /trunk/debian/elk.prerm
+   A /trunk/debian/elkdoc.docs
+   A /trunk/debian/ldflags-elk.1
+   A /trunk/debian/linkscheme.1
+   A /trunk/debian/makedl.1
+   A /trunk/debian/manpages
+   A /trunk/debian/menu
+   A /trunk/debian/rules
+   A /trunk/debian/scheme-elk.1
+   A /trunk/debian/scheme-warning-elk
+   A /trunk/debian/scheme-warning-elk.1
+   M /trunk/doc/README
+   M /trunk/include/build
+   M /trunk/include/build-config
+   M /trunk/include/intern.h
+   M /trunk/lib/misc/build
+   M /trunk/lib/unix/build
+   M /trunk/lib/xaw/build
+   M /trunk/lib/xlib/build
+   M /trunk/lib/xm/build
+   M /trunk/lib/xm/xt/build
+   M /trunk/lib/xt/build
+   M /trunk/scm/build
+   M /trunk/scripts/build
+   M /trunk/scripts/src/ldflags
+   M /trunk/scripts/src/linkscheme
+   M /trunk/src/build
+   M /trunk/src/cont.c
+   M /trunk/src/dump-elf.c
+   M /trunk/src/load-dl.c
+   M /trunk/src/load-ld.c
+   M /trunk/src/main.c
+   M /trunk/src/print.c
+
+  * Imported the original 3.0-8.1 Debian diff.
+
+------------------------------------------------------------------------
+r1 | sam | 2003-08-19 21:19:38 +0200 (Tue, 19 Aug 2003) | 2 lines
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+   A /trunk/BUGS
+   A /trunk/CHANGES
+   A /trunk/CONTRIBUTORS
+   A /trunk/COPYRIGHT
+   A /trunk/INSTALL
+   A /trunk/MACHINES
+   A /trunk/MIGRATE
+   A /trunk/Makefile
+   A /trunk/PATCHLEVEL
+   A /trunk/README
+   A /trunk/ROADMAP
+   A /trunk/TODO
+   A /trunk/config
+   A /trunk/config/386pc-bsdi-gcc
+   A /trunk/config/alpha-osf1-cc
+   A /trunk/config/dec5100-ultrix4.2-cc
+   A /trunk/config/hp9k700-hpux10.0-cc
+   A /trunk/config/hp9k700-hpux9.0-cc
+   A /trunk/config/i486-linux-gcc
+   A /trunk/config/next-mach3.3-cc
+   A /trunk/config/powerpc-aix4.1-gcc
+   A /trunk/config/powerpc-aix4.1-xlc
+   A /trunk/config/powerpc-solaris2.5-cc
+   A /trunk/config/rs6000-aix3.2-cc
+   A /trunk/config/sgi-irix5.3-cc
+   A /trunk/config/sgi-irix6.2-cc
+   A /trunk/config/site
+   A /trunk/config/sites
+   A /trunk/config/sites/alpha-osf1
+   A /trunk/config/sites/dec5100-ultrix
+   A /trunk/config/sites/hp9k700-hpux9.0
+   A /trunk/config/sites/sun-sunos4.1
+   A /trunk/config/sites/sun-sunos5
+   A /trunk/config/sun-sunos4.1-acc
+   A /trunk/config/sun-sunos4.1-cc
+   A /trunk/config/sun-sunos4.1-gcc
+   A /trunk/config/sun-sunos5-acc
+   A /trunk/config/sun-sunos5-gcc
+   A /trunk/config/untested
+   A /trunk/config/untested/386pc-386bsd-gcc
+   A /trunk/config/untested/386pc-dos-gcc
+   A /trunk/config/untested/convex230-convexos10-cc
+   A /trunk/config/untested/cray-unicos-cc
+   A /trunk/config/untested/mx300i-svr4-cc
+   A /trunk/config/untested/sony3200-news4-gcc
+   A /trunk/doc
+   A /trunk/doc/README
+   A /trunk/doc/bitstring
+   A /trunk/doc/bitstring/Makefile
+   A /trunk/doc/bitstring/bitstring.ms
+   A /trunk/doc/bitstring/bitstring.ps
+   A /trunk/doc/cprog
+   A /trunk/doc/cprog/Makefile
+   A /trunk/doc/cprog/cprog.ms
+   A /trunk/doc/cprog/cprog.ps
+   A /trunk/doc/kernel
+   A /trunk/doc/kernel/Makefile
+   A /trunk/doc/kernel/kernel.ms
+   A /trunk/doc/kernel/kernel.ps
+   A /trunk/doc/man
+   A /trunk/doc/man/Makefile
+   A /trunk/doc/man/elk.1
+   A /trunk/doc/man/elk.ps
+   A /trunk/doc/man/scheme.1
+   A /trunk/doc/oops
+   A /trunk/doc/oops/Makefile
+   A /trunk/doc/oops/oops.ms
+   A /trunk/doc/oops/oops.ps
+   A /trunk/doc/record
+   A /trunk/doc/record/Makefile
+   A /trunk/doc/record/record.ms
+   A /trunk/doc/record/record.ps
+   A /trunk/doc/regexp
+   A /trunk/doc/regexp/Makefile
+   A /trunk/doc/regexp/regexp.ms
+   A /trunk/doc/regexp/regexp.ps
+   A /trunk/doc/unix
+   A /trunk/doc/unix/Makefile
+   A /trunk/doc/unix/unix.ms
+   A /trunk/doc/unix/unix.ps
+   A /trunk/doc/usenix
+   A /trunk/doc/usenix/Makefile
+   A /trunk/doc/usenix/usenix.ms
+   A /trunk/doc/usenix/usenix.ps
+   A /trunk/doc/util
+   A /trunk/doc/util/Makefile
+   A /trunk/doc/util/block.awk
+   A /trunk/doc/util/fixindex.awk
+   A /trunk/doc/util/mkindex.c
+   A /trunk/doc/util/tmac.index
+   A /trunk/doc/util/tmac.scheme
+   A /trunk/doc/xlib
+   A /trunk/doc/xlib/Makefile
+   A /trunk/doc/xlib/xlib.ms
+   A /trunk/doc/xlib/xlib.ps
+   A /trunk/doc/xt
+   A /trunk/doc/xt/Makefile
+   A /trunk/doc/xt/xt.ms
+   A /trunk/doc/xt/xt.ps
+   A /trunk/examples
+   A /trunk/examples/CC
+   A /trunk/examples/CC/class.c
+   A /trunk/examples/CC/constructor.c
+   A /trunk/examples/regexp
+   A /trunk/examples/regexp/match.scm
+   A /trunk/examples/scheme
+   A /trunk/examples/scheme/Y.scm
+   A /trunk/examples/scheme/acker.scm
+   A /trunk/examples/scheme/billiard.scm
+   A /trunk/examples/scheme/cc.scm
+   A /trunk/examples/scheme/cell.scm
+   A /trunk/examples/scheme/co.scm
+   A /trunk/examples/scheme/compile.scm
+   A /trunk/examples/scheme/cps.scm
+   A /trunk/examples/scheme/dynamic.scm
+   A /trunk/examples/scheme/fib.scm
+   A /trunk/examples/scheme/fix.scm
+   A /trunk/examples/scheme/flame.scm
+   A /trunk/examples/scheme/hanoi.scm
+   A /trunk/examples/scheme/kons.scm
+   A /trunk/examples/scheme/meissel.scm
+   A /trunk/examples/scheme/mondo.scm
+   A /trunk/examples/scheme/perm.scm
+   A /trunk/examples/scheme/prim.scm
+   A /trunk/examples/scheme/ramanujan.scm
+   A /trunk/examples/scheme/rungekutta.scm
+   A /trunk/examples/scheme/sqrt.scm
+   A /trunk/examples/scheme/unify.scm
+   A /trunk/examples/scheme/work.scm
+   A /trunk/examples/unix
+   A /trunk/examples/unix/calc.scm
+   A /trunk/examples/unix/copy.scm
+   A /trunk/examples/unix/lock.scm
+   A /trunk/examples/unix/ls.scm
+   A /trunk/examples/unix/pipsiz.scm
+   A /trunk/examples/unix/timeout.scm
+   A /trunk/examples/xaw
+   A /trunk/examples/xaw/accel.scm
+   A /trunk/examples/xaw/clickcount.scm
+   A /trunk/examples/xaw/dialog.scm
+   A /trunk/examples/xaw/grip.scm
+   A /trunk/examples/xaw/list.scm
+   A /trunk/examples/xaw/paned.scm
+   A /trunk/examples/xaw/panner.scm
+   A /trunk/examples/xaw/popup.scm
+   A /trunk/examples/xaw/porthole.scm
+   A /trunk/examples/xaw/pulldown.scm
+   A /trunk/examples/xaw/scrollbar.scm
+   A /trunk/examples/xaw/scrollbox.scm
+   A /trunk/examples/xaw/stripchart.scm
+   A /trunk/examples/xaw/text.scm
+   A /trunk/examples/xaw/tree.scm
+   A /trunk/examples/xaw/viewport.scm
+   A /trunk/examples/xlib
+   A /trunk/examples/xlib/hello.scm
+   A /trunk/examples/xlib/lines.scm
+   A /trunk/examples/xlib/map-all.scm
+   A /trunk/examples/xlib/picture.scm
+   A /trunk/examples/xlib/poly.scm
+   A /trunk/examples/xlib/properties.scm
+   A /trunk/examples/xlib/track.scm
+   A /trunk/examples/xlib/useful.scm
+   A /trunk/examples/xlib/wm-delete.scm
+   A /trunk/examples/xm
+   A /trunk/examples/xm/drawing-area.scm
+   A /trunk/examples/xm/list.scm
+   A /trunk/examples/xm/main-window.scm
+   A /trunk/examples/xm/menu-stuff.scm
+   A /trunk/examples/xm/message-dialog.scm
+   A /trunk/examples/xm/option-menu.scm
+   A /trunk/examples/xm/popup-menu.scm
+   A /trunk/examples/xm/pulldown-menu.scm
+   A /trunk/examples/xm/radio-stuff.scm
+   A /trunk/examples/xm/radio.scm
+   A /trunk/examples/xm/scroll-bar.scm
+   A /trunk/examples/xm/selection-box.scm
+   A /trunk/examples/xm/vcr.scm
+   A /trunk/include
+   A /trunk/include/Makefile
+   A /trunk/include/build
+   A /trunk/include/build-config
+   A /trunk/include/compat.h
+   A /trunk/include/cstring.h
+   A /trunk/include/exception.h
+   A /trunk/include/extern.h
+   A /trunk/include/funcproto.h
+   A /trunk/include/gc.h
+   A /trunk/include/intern.h
+   A /trunk/include/kernel.h
+   A /trunk/include/misc.h
+   A /trunk/include/object.h
+   A /trunk/include/param.h
+   A /trunk/include/scheme.h
+   A /trunk/include/stkmem.h
+   A /trunk/include/type.h
+   A /trunk/lib
+   A /trunk/lib/misc
+   A /trunk/lib/misc/Makefile
+   A /trunk/lib/misc/bitstring.c
+   A /trunk/lib/misc/build
+   A /trunk/lib/misc/debug.c
+   A /trunk/lib/misc/elk-eval.c
+   A /trunk/lib/misc/gdbm.c
+   A /trunk/lib/misc/hack.c
+   A /trunk/lib/misc/monitor.c
+   A /trunk/lib/misc/newhandler.c
+   A /trunk/lib/misc/record.c
+   A /trunk/lib/misc/regexp.c
+   A /trunk/lib/misc/struct.c
+   A /trunk/lib/unix
+   A /trunk/lib/unix/Makefile
+   A /trunk/lib/unix/TODO
+   A /trunk/lib/unix/build
+   A /trunk/lib/unix/error.c
+   A /trunk/lib/unix/fdescr.c
+   A /trunk/lib/unix/file.c
+   A /trunk/lib/unix/lock.c
+   A /trunk/lib/unix/misc.c
+   A /trunk/lib/unix/passwd.c
+   A /trunk/lib/unix/process.c
+   A /trunk/lib/unix/signal.c
+   A /trunk/lib/unix/system.c
+   A /trunk/lib/unix/temp.c
+   A /trunk/lib/unix/time.c
+   A /trunk/lib/unix/unix.c
+   A /trunk/lib/unix/unix.h
+   A /trunk/lib/unix/wait.c
+   A /trunk/lib/xaw
+   A /trunk/lib/xaw/ALIASES
+   A /trunk/lib/xaw/Makefile
+   A /trunk/lib/xaw/ascii.d
+   A /trunk/lib/xaw/box.d
+   A /trunk/lib/xaw/build
+   A /trunk/lib/xaw/clock.d
+   A /trunk/lib/xaw/command.d
+   A /trunk/lib/xaw/dialog.d
+   A /trunk/lib/xaw/form.d
+   A /trunk/lib/xaw/grip.d
+   A /trunk/lib/xaw/label.d
+   A /trunk/lib/xaw/list.d
+   A /trunk/lib/xaw/menubutton.d
+   A /trunk/lib/xaw/paned.d
+   A /trunk/lib/xaw/panner.d
+   A /trunk/lib/xaw/porthole.d
+   A /trunk/lib/xaw/repeater.d
+   A /trunk/lib/xaw/scrollbar.d
+   A /trunk/lib/xaw/shell.d
+   A /trunk/lib/xaw/simplemenu.d
+   A /trunk/lib/xaw/sme.d
+   A /trunk/lib/xaw/smebsb.d
+   A /trunk/lib/xaw/smeline.d
+   A /trunk/lib/xaw/stripchart.d
+   A /trunk/lib/xaw/toggle.d
+   A /trunk/lib/xaw/tree.d
+   A /trunk/lib/xaw/viewport.d
+   A /trunk/lib/xlib
+   A /trunk/lib/xlib/MISSING
+   A /trunk/lib/xlib/Makefile
+   A /trunk/lib/xlib/build
+   A /trunk/lib/xlib/client.c
+   A /trunk/lib/xlib/color.c
+   A /trunk/lib/xlib/colormap.c
+   A /trunk/lib/xlib/cursor.c
+   A /trunk/lib/xlib/display.c
+   A /trunk/lib/xlib/error.c
+   A /trunk/lib/xlib/event.c
+   A /trunk/lib/xlib/extension.c
+   A /trunk/lib/xlib/font.c
+   A /trunk/lib/xlib/gcontext.c
+   A /trunk/lib/xlib/grab.c
+   A /trunk/lib/xlib/graphics.c
+   A /trunk/lib/xlib/init.c
+   A /trunk/lib/xlib/key.c
+   A /trunk/lib/xlib/objects.c
+   A /trunk/lib/xlib/pixel.c
+   A /trunk/lib/xlib/pixmap.c
+   A /trunk/lib/xlib/property.c
+   A /trunk/lib/xlib/text.c
+   A /trunk/lib/xlib/type.c
+   A /trunk/lib/xlib/util.c
+   A /trunk/lib/xlib/window.c
+   A /trunk/lib/xlib/wm.c
+   A /trunk/lib/xlib/xlib.h
+   A /trunk/lib/xm
+   A /trunk/lib/xm/ALIASES
+   A /trunk/lib/xm/Makefile
+   A /trunk/lib/xm/arrow-button.d
+   A /trunk/lib/xm/build
+   A /trunk/lib/xm/bulletin-brd.d
+   A /trunk/lib/xm/cascade-btn.d
+   A /trunk/lib/xm/command.d
+   A /trunk/lib/xm/drawing-area.d
+   A /trunk/lib/xm/drawn-button.d
+   A /trunk/lib/xm/file-selectn.d
+   A /trunk/lib/xm/form.d
+   A /trunk/lib/xm/frame.d
+   A /trunk/lib/xm/label.d
+   A /trunk/lib/xm/list.d
+   A /trunk/lib/xm/main-window.d
+   A /trunk/lib/xm/message-box.d
+   A /trunk/lib/xm/paned-window.d
+   A /trunk/lib/xm/push-button.d
+   A /trunk/lib/xm/row-column.d
+   A /trunk/lib/xm/scale.d
+   A /trunk/lib/xm/scroll-bar.d
+   A /trunk/lib/xm/scrolled-win.d
+   A /trunk/lib/xm/selectn-box.d
+   A /trunk/lib/xm/separator.d
+   A /trunk/lib/xm/shell.d
+   A /trunk/lib/xm/support.d
+   A /trunk/lib/xm/text.d
+   A /trunk/lib/xm/toggle-btn.d
+   A /trunk/lib/xm/xt
+   A /trunk/lib/xm/xt/Makefile
+   A /trunk/lib/xm/xt/build
+   A /trunk/lib/xt
+   A /trunk/lib/xt/MISSING
+   A /trunk/lib/xt/Makefile
+   A /trunk/lib/xt/accelerator.c
+   A /trunk/lib/xt/action.c
+   A /trunk/lib/xt/build
+   A /trunk/lib/xt/callback.c
+   A /trunk/lib/xt/class.c
+   A /trunk/lib/xt/classname.c
+   A /trunk/lib/xt/context.c
+   A /trunk/lib/xt/converter.c
+   A /trunk/lib/xt/error.c
+   A /trunk/lib/xt/function.c
+   A /trunk/lib/xt/identifier.c
+   A /trunk/lib/xt/init.c
+   A /trunk/lib/xt/mkwidget.scm
+   A /trunk/lib/xt/objects.c
+   A /trunk/lib/xt/popup.c
+   A /trunk/lib/xt/resource.c
+   A /trunk/lib/xt/translation.c
+   A /trunk/lib/xt/widget.c
+   A /trunk/lib/xt/xt.h
+   A /trunk/scm
+   A /trunk/scm/Makefile
+   A /trunk/scm/apropos.scm
+   A /trunk/scm/bitstring.scm
+   A /trunk/scm/build
+   A /trunk/scm/build-siteinfo
+   A /trunk/scm/cscheme.scm
+   A /trunk/scm/debug.scm
+   A /trunk/scm/describe.scm
+   A /trunk/scm/gdbmtest.scm
+   A /trunk/scm/initscheme.scm
+   A /trunk/scm/motif.scm
+   A /trunk/scm/oops.scm
+   A /trunk/scm/parse.scm
+   A /trunk/scm/pp.scm
+   A /trunk/scm/qsort.scm
+   A /trunk/scm/record.scm
+   A /trunk/scm/recordutil.scm
+   A /trunk/scm/regexp.scm
+   A /trunk/scm/safe-env.scm
+   A /trunk/scm/setf.scm
+   A /trunk/scm/struct.scm
+   A /trunk/scm/toplevel.scm
+   A /trunk/scm/trace.scm
+   A /trunk/scm/unix.scm
+   A /trunk/scm/xlib.scm
+   A /trunk/scm/xt.scm
+   A /trunk/scm/xwidgets.scm
+   A /trunk/scripts
+   A /trunk/scripts/Makefile
+   A /trunk/scripts/README
+   A /trunk/scripts/build
+   A /trunk/scripts/src
+   A /trunk/scripts/src/ldflags
+   A /trunk/scripts/src/linkscheme
+   A /trunk/scripts/src/makedl-dl
+   A /trunk/scripts/src/makedl-ld
+   A /trunk/scripts/src/makedl-none
+   A /trunk/scripts/src/makedl-rld
+   A /trunk/scripts/src/makedl-shl
+   A /trunk/src
+   A /trunk/src/Makefile
+   A /trunk/src/autoload.c
+   A /trunk/src/bignum.c
+   A /trunk/src/bool.c
+   A /trunk/src/build
+   A /trunk/src/char.c
+   A /trunk/src/cont.c
+   A /trunk/src/cstring.c
+   A /trunk/src/debug.c
+   A /trunk/src/dump-ecoff.c
+   A /trunk/src/dump-elf.c
+   A /trunk/src/dump-hp9k.c
+   A /trunk/src/dump-vanilla.c
+   A /trunk/src/dump.c
+   A /trunk/src/env.c
+   A /trunk/src/error.c
+   A /trunk/src/exception.c
+   A /trunk/src/feature.c
+   A /trunk/src/heap-gen.c
+   A /trunk/src/heap-sc.c
+   A /trunk/src/heap.c
+   A /trunk/src/io.c
+   A /trunk/src/list.c
+   A /trunk/src/load-dl.c
+   A /trunk/src/load-ld.c
+   A /trunk/src/load-rld.c
+   A /trunk/src/load-shl.c
+   A /trunk/src/load.c
+   A /trunk/src/main.c
+   A /trunk/src/malloc.c
+   A /trunk/src/math.c
+   A /trunk/src/onfork.c
+   A /trunk/src/prim.c
+   A /trunk/src/print.c
+   A /trunk/src/proc.c
+   A /trunk/src/promise.c
+   A /trunk/src/read.c
+   A /trunk/src/special.c
+   A /trunk/src/stab-bsd.c
+   A /trunk/src/stab-coff.c
+   A /trunk/src/stab-convex.c
+   A /trunk/src/stab-ecoff.c
+   A /trunk/src/stab-elf.c
+   A /trunk/src/stab-hp9k300.c
+   A /trunk/src/stab-hp9k800.c
+   A /trunk/src/stab-macho.c
+   A /trunk/src/stab.c
+   A /trunk/src/stkmem.c
+   A /trunk/src/string.c
+   A /trunk/src/symbol.c
+   A /trunk/src/terminate.c
+   A /trunk/src/type.c
+   A /trunk/src/vector.c
+   A /trunk/util
+   A /trunk/util/README
+   A /trunk/util/alloca.c
+   A /trunk/util/getversion
+
+  * Imported original elk 3.0 tree.
+
+------------------------------------------------------------------------
